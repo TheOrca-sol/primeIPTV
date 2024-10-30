@@ -1,24 +1,59 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { ThemeProvider } from 'styled-components';
+import styled from 'styled-components';
+import GlobalStyles from './styles/GlobalStyles';
+import Navbar from './components/common/Navbar';
+import Footer from './components/common/Footer';
+import Home from './pages/Home';
+import Pricing from './pages/Pricing';
+import Channels from './pages/Channels';
+import Support from './pages/Support';
+import Dashboard from './pages/Dashboard';
+
+const theme = {
+  colors: {
+    primary: '#2563eb',
+    secondary: '#1e40af',
+    background: '#ffffff',
+    text: '#1f2937',
+    accent: '#3b82f6',
+  },
+  breakpoints: {
+    mobile: '320px',
+    tablet: '768px',
+    desktop: '1024px',
+  }
+};
+
+const AppContainer = styled.div`
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+`;
+
+const MainContent = styled.main`
+  flex: 1;
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <GlobalStyles />
+      <BrowserRouter>
+        <AppContainer>
+          <Navbar />
+          <MainContent>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/pricing" element={<Pricing />} />
+              <Route path="/channels" element={<Channels />} />
+              <Route path="/support" element={<Support />} />
+            </Routes>
+          </MainContent>
+          <Footer />
+        </AppContainer>
+      </BrowserRouter>
+    </ThemeProvider>
   );
 }
 

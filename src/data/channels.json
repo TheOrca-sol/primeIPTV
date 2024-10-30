@@ -1,0 +1,1081 @@
+{
+  "categories": [
+    "All",
+    "Sports",
+    "Movies",
+    "Entertainment",
+    "News",
+    "Kids",
+    "Documentary",
+    "Music",
+    "USA",
+    "UK",
+    "Arabic",
+    "French",
+    "Indian",
+    "Turkish",
+    "Spanish",
+    "PPV Events"
+  ],
+  "channels": [
+    {
+      "id": "sports_1",
+      "name": "ESPN HD",
+      "category": "Sports",
+      "quality": "4K",
+      "region": "USA"
+    },
+    {
+      "id": "sports_2",
+      "name": "ESPN 2 HD",
+      "category": "Sports",
+      "quality": "4K",
+      "region": "USA"
+    },
+    {
+      "id": "sports_3",
+      "name": "Fox Sports 1 HD",
+      "category": "Sports",
+      "quality": "4K",
+      "region": "USA"
+    },
+    {
+      "id": "sports_4",
+      "name": "Fox Sports 2 HD",
+      "category": "Sports",
+      "quality": "4K",
+      "region": "USA"
+    },
+    {
+      "id": "sports_5",
+      "name": "NBA TV HD",
+      "category": "Sports",
+      "quality": "4K",
+      "region": "USA"
+    },
+    {
+      "id": "sports_6",
+      "name": "NFL Network HD",
+      "category": "Sports",
+      "quality": "4K",
+      "region": "USA"
+    },
+    {
+      "id": "sports_7",
+      "name": "MLB Network HD",
+      "category": "Sports",
+      "quality": "4K",
+      "region": "USA"
+    },
+    {
+      "id": "sports_8",
+      "name": "NHL Network HD",
+      "category": "Sports",
+      "quality": "4K",
+      "region": "USA"
+    },
+
+    {
+      "id": "sports_9",
+      "name": "Sky Sports Main Event HD",
+      "category": "Sports",
+      "quality": "4K",
+      "region": "UK"
+    },
+    {
+      "id": "sports_10",
+      "name": "Sky Sports Premier League HD",
+      "category": "Sports",
+      "quality": "4K",
+      "region": "UK"
+    },
+    {
+      "id": "sports_11",
+      "name": "Sky Sports Football HD",
+      "category": "Sports",
+      "quality": "4K",
+      "region": "UK"
+    },
+    {
+      "id": "sports_12",
+      "name": "Sky Sports Arena HD",
+      "category": "Sports",
+      "quality": "4K",
+      "region": "UK"
+    },
+    {
+      "id": "sports_13",
+      "name": "Sky Sports F1 HD",
+      "category": "Sports",
+      "quality": "4K",
+      "region": "UK"
+    },
+    {
+      "id": "sports_14",
+      "name": "BT Sport 1 HD",
+      "category": "Sports",
+      "quality": "4K",
+      "region": "UK"
+    },
+    {
+      "id": "sports_15",
+      "name": "BT Sport 2 HD",
+      "category": "Sports",
+      "quality": "4K",
+      "region": "UK"
+    },
+    {
+      "id": "sports_16",
+      "name": "BT Sport 3 HD",
+      "category": "Sports",
+      "quality": "4K",
+      "region": "UK"
+    },
+
+    {
+      "id": "sports_17",
+      "name": "beIN Sports Premium 1 HD",
+      "category": "Sports",
+      "quality": "4K",
+      "region": "Arabic"
+    },
+    {
+      "id": "sports_18",
+      "name": "beIN Sports Premium 2 HD",
+      "category": "Sports",
+      "quality": "4K",
+      "region": "Arabic"
+    },
+    {
+      "id": "sports_19",
+      "name": "beIN Sports Premium 3 HD",
+      "category": "Sports",
+      "quality": "4K",
+      "region": "Arabic"
+    },
+    {
+      "id": "sports_20",
+      "name": "beIN Sports 1 HD",
+      "category": "Sports",
+      "quality": "4K",
+      "region": "Arabic"
+    },
+    {
+      "id": "sports_21",
+      "name": "beIN Sports 2 HD",
+      "category": "Sports",
+      "quality": "4K",
+      "region": "Arabic"
+    },
+    {
+      "id": "sports_22",
+      "name": "beIN Sports 3 HD",
+      "category": "Sports",
+      "quality": "4K",
+      "region": "Arabic"
+    },
+    {
+      "id": "sports_23",
+      "name": "beIN Sports 4 HD",
+      "category": "Sports",
+      "quality": "4K",
+      "region": "Arabic"
+    },
+    {
+      "id": "sports_24",
+      "name": "beIN Sports 5 HD",
+      "category": "Sports",
+      "quality": "4K",
+      "region": "Arabic"
+    },
+    {
+      "id": "sports_25",
+      "name": "beIN Sports 6 HD",
+      "category": "Sports",
+      "quality": "4K",
+      "region": "Arabic"
+    },
+    {
+      "id": "sports_26",
+      "name": "beIN Sports 7 HD",
+      "category": "Sports",
+      "quality": "4K",
+      "region": "Arabic"
+    },
+
+    {
+      "id": "movies_1",
+      "name": "HBO HD",
+      "category": "Movies",
+      "quality": "4K",
+      "region": "USA"
+    },
+    {
+      "id": "movies_2",
+      "name": "HBO 2 HD",
+      "category": "Movies",
+      "quality": "4K",
+      "region": "USA"
+    },
+    {
+      "id": "movies_3",
+      "name": "HBO Family HD",
+      "category": "Movies",
+      "quality": "4K",
+      "region": "USA"
+    },
+    {
+      "id": "movies_4",
+      "name": "HBO Signature HD",
+      "category": "Movies",
+      "quality": "4K",
+      "region": "USA"
+    },
+    {
+      "id": "movies_5",
+      "name": "Cinemax HD",
+      "category": "Movies",
+      "quality": "4K",
+      "region": "USA"
+    },
+    {
+      "id": "movies_6",
+      "name": "Showtime HD",
+      "category": "Movies",
+      "quality": "4K",
+      "region": "USA"
+    },
+    {
+      "id": "movies_7",
+      "name": "Showtime 2 HD",
+      "category": "Movies",
+      "quality": "4K",
+      "region": "USA"
+    },
+    {
+      "id": "movies_8",
+      "name": "Starz HD",
+      "category": "Movies",
+      "quality": "4K",
+      "region": "USA"
+    },
+    {
+      "id": "movies_9",
+      "name": "Starz Edge HD",
+      "category": "Movies",
+      "quality": "4K",
+      "region": "USA"
+    },
+    
+    {
+      "id": "movies_10",
+      "name": "Sky Cinema Premiere HD",
+      "category": "Movies",
+      "quality": "4K",
+      "region": "UK"
+    },
+    {
+      "id": "movies_11",
+      "name": "Sky Cinema Hits HD",
+      "category": "Movies",
+      "quality": "4K",
+      "region": "UK"
+    },
+    {
+      "id": "movies_12",
+      "name": "Sky Cinema Action HD",
+      "category": "Movies",
+      "quality": "4K",
+      "region": "UK"
+    },
+    {
+      "id": "movies_13",
+      "name": "Sky Cinema Comedy HD",
+      "category": "Movies",
+      "quality": "4K",
+      "region": "UK"
+    },
+    {
+      "id": "movies_14",
+      "name": "Sky Cinema Family HD",
+      "category": "Movies",
+      "quality": "4K",
+      "region": "UK"
+    },
+    
+    {
+      "id": "movies_15",
+      "name": "beIN Movies 1 HD",
+      "category": "Movies",
+      "quality": "4K",
+      "region": "Arabic"
+    },
+    {
+      "id": "movies_16",
+      "name": "beIN Movies 2 HD",
+      "category": "Movies",
+      "quality": "4K",
+      "region": "Arabic"
+    },
+    {
+      "id": "movies_17",
+      "name": "beIN Movies 3 HD",
+      "category": "Movies",
+      "quality": "4K",
+      "region": "Arabic"
+    },
+    {
+      "id": "movies_18",
+      "name": "beIN Movies 4 HD",
+      "category": "Movies",
+      "quality": "4K",
+      "region": "Arabic"
+    },
+    {
+      "id": "movies_19",
+      "name": "OSN Movies HD",
+      "category": "Movies",
+      "quality": "4K",
+      "region": "Arabic"
+    },
+    {
+      "id": "movies_20",
+      "name": "OSN Action HD",
+      "category": "Movies",
+      "quality": "4K",
+      "region": "Arabic"
+    },
+    
+    {
+      "id": "ent_1",
+      "name": "ABC HD",
+      "category": "Entertainment",
+      "quality": "4K",
+      "region": "USA"
+    },
+    {
+      "id": "ent_2",
+      "name": "NBC HD",
+      "category": "Entertainment",
+      "quality": "4K",
+      "region": "USA"
+    },
+    {
+      "id": "ent_3",
+      "name": "CBS HD",
+      "category": "Entertainment",
+      "quality": "4K",
+      "region": "USA"
+    },
+    {
+      "id": "ent_4",
+      "name": "FOX HD",
+      "category": "Entertainment",
+      "quality": "4K",
+      "region": "USA"
+    },
+    {
+      "id": "ent_5",
+      "name": "The CW HD",
+      "category": "Entertainment",
+      "quality": "4K",
+      "region": "USA"
+    },
+    {
+      "id": "ent_6",
+      "name": "AMC HD",
+      "category": "Entertainment",
+      "quality": "4K",
+      "region": "USA"
+    },
+    {
+      "id": "ent_7",
+      "name": "FX HD",
+      "category": "Entertainment",
+      "quality": "4K",
+      "region": "USA"
+    },
+    {
+      "id": "ent_8",
+      "name": "TNT HD",
+      "category": "Entertainment",
+      "quality": "4K",
+      "region": "USA"
+    },
+    {
+      "id": "ent_9",
+      "name": "USA Network HD",
+      "category": "Entertainment",
+      "quality": "4K",
+      "region": "USA"
+    },
+    {
+      "id": "ent_10",
+      "name": "TBS HD",
+      "category": "Entertainment",
+      "quality": "4K",
+      "region": "USA"
+    },
+
+    {
+      "id": "ent_11",
+      "name": "BBC One HD",
+      "category": "Entertainment",
+      "quality": "4K",
+      "region": "UK"
+    },
+    {
+      "id": "ent_12",
+      "name": "BBC Two HD",
+      "category": "Entertainment",
+      "quality": "4K",
+      "region": "UK"
+    },
+    {
+      "id": "ent_13",
+      "name": "ITV HD",
+      "category": "Entertainment",
+      "quality": "4K",
+      "region": "UK"
+    },
+    {
+      "id": "ent_14",
+      "name": "Channel 4 HD",
+      "category": "Entertainment",
+      "quality": "4K",
+      "region": "UK"
+    },
+    {
+      "id": "ent_15",
+      "name": "Channel 5 HD",
+      "category": "Entertainment",
+      "quality": "4K",
+      "region": "UK"
+    },
+
+    {
+      "id": "ent_16",
+      "name": "MBC 1 HD",
+      "category": "Entertainment",
+      "quality": "4K",
+      "region": "Arabic"
+    },
+    {
+      "id": "ent_17",
+      "name": "MBC 2 HD",
+      "category": "Entertainment",
+      "quality": "4K",
+      "region": "Arabic"
+    },
+    {
+      "id": "ent_18",
+      "name": "MBC 3 HD",
+      "category": "Entertainment",
+      "quality": "4K",
+      "region": "Arabic"
+    },
+    {
+      "id": "ent_19",
+      "name": "MBC 4 HD",
+      "category": "Entertainment",
+      "quality": "4K",
+      "region": "Arabic"
+    },
+    {
+      "id": "ent_20",
+      "name": "MBC 5 HD",
+      "category": "Entertainment",
+      "quality": "4K",
+      "region": "Arabic"
+    },
+    {
+      "id": "ent_21",
+      "name": "MBC Action HD",
+      "category": "Entertainment",
+      "quality": "4K",
+      "region": "Arabic"
+    },
+    {
+      "id": "ent_22",
+      "name": "MBC Max HD",
+      "category": "Entertainment",
+      "quality": "4K",
+      "region": "Arabic"
+    },
+    {
+      "id": "ent_23",
+      "name": "MBC Drama HD",
+      "category": "Entertainment",
+      "quality": "4K",
+      "region": "Arabic"
+    },
+    {
+      "id": "ent_24",
+      "name": "MBC Drama+ HD",
+      "category": "Entertainment",
+      "quality": "4K",
+      "region": "Arabic"
+    },
+    {
+      "id": "ent_25",
+      "name": "MBC Variety HD",
+      "category": "Entertainment",
+      "quality": "4K",
+      "region": "Arabic"
+    },
+
+    {
+      "id": "news_1",
+      "name": "CNN International HD",
+      "category": "News",
+      "quality": "1080p",
+      "region": "USA"
+    },
+    {
+      "id": "news_2",
+      "name": "BBC World News HD",
+      "category": "News",
+      "quality": "1080p",
+      "region": "UK"
+    },
+    {
+      "id": "news_3",
+      "name": "Al Jazeera English HD",
+      "category": "News",
+      "quality": "1080p",
+      "region": "Arabic"
+    },
+    {
+      "id": "news_4",
+      "name": "Sky News HD",
+      "category": "News",
+      "quality": "1080p",
+      "region": "UK"
+    },
+    {
+      "id": "news_5",
+      "name": "Fox News HD",
+      "category": "News",
+      "quality": "1080p",
+      "region": "USA"
+    },
+    {
+      "id": "news_6",
+      "name": "MSNBC HD",
+      "category": "News",
+      "quality": "1080p",
+      "region": "USA"
+    },
+    {
+      "id": "news_7",
+      "name": "CNBC HD",
+      "category": "News",
+      "quality": "1080p",
+      "region": "USA"
+    },
+    {
+      "id": "news_8",
+      "name": "Bloomberg HD",
+      "category": "News",
+      "quality": "1080p",
+      "region": "USA"
+    },
+    {
+      "id": "news_9",
+      "name": "Euronews HD",
+      "category": "News",
+      "quality": "1080p",
+      "region": "UK"
+    },
+    {
+      "id": "news_10",
+      "name": "France 24 English HD",
+      "category": "News",
+      "quality": "1080p",
+      "region": "French"
+    },
+    {
+      "id": "news_11",
+      "name": "Deutsche Welle HD",
+      "category": "News",
+      "quality": "1080p",
+      "region": "UK"
+    },
+    {
+      "id": "news_12",
+      "name": "RT News HD",
+      "category": "News",
+      "quality": "1080p",
+      "region": "UK"
+    },
+
+    {
+      "id": "news_13",
+      "name": "Al Arabiya HD",
+      "category": "News",
+      "quality": "1080p",
+      "region": "Arabic"
+    },
+    {
+      "id": "news_14",
+      "name": "Al Jazeera Arabic HD",
+      "category": "News",
+      "quality": "1080p",
+      "region": "Arabic"
+    },
+    {
+      "id": "news_15",
+      "name": "Sky News Arabia HD",
+      "category": "News",
+      "quality": "1080p",
+      "region": "Arabic"
+    },
+
+    {
+      "id": "doc_1",
+      "name": "National Geographic HD",
+      "category": "Documentary",
+      "quality": "4K",
+      "region": "USA"
+    },
+    {
+      "id": "doc_2",
+      "name": "Nat Geo Wild HD",
+      "category": "Documentary",
+      "quality": "4K",
+      "region": "USA"
+    },
+    {
+      "id": "doc_3",
+      "name": "Discovery Channel HD",
+      "category": "Documentary",
+      "quality": "4K",
+      "region": "USA"
+    },
+    {
+      "id": "doc_4",
+      "name": "Discovery Science HD",
+      "category": "Documentary",
+      "quality": "4K",
+      "region": "USA"
+    },
+    {
+      "id": "doc_5",
+      "name": "History Channel HD",
+      "category": "Documentary",
+      "quality": "4K",
+      "region": "USA"
+    },
+    {
+      "id": "doc_6",
+      "name": "Animal Planet HD",
+      "category": "Documentary",
+      "quality": "4K",
+      "region": "USA"
+    },
+    {
+      "id": "doc_7",
+      "name": "Investigation Discovery HD",
+      "category": "Documentary",
+      "quality": "4K",
+      "region": "USA"
+    },
+    {
+      "id": "doc_8",
+      "name": "Smithsonian Channel HD",
+      "category": "Documentary",
+      "quality": "4K",
+      "region": "USA"
+    },
+    {
+      "id": "doc_9",
+      "name": "Crime & Investigation HD",
+      "category": "Documentary",
+      "quality": "4K",
+      "region": "UK"
+    },
+    {
+      "id": "doc_10",
+      "name": "BBC Earth HD",
+      "category": "Documentary",
+      "quality": "4K",
+      "region": "UK"
+    },
+
+    {
+      "id": "kids_1",
+      "name": "Disney Channel HD",
+      "category": "Kids",
+      "quality": "1080p",
+      "region": "USA"
+    },
+    {
+      "id": "kids_2",
+      "name": "Disney Junior HD",
+      "category": "Kids",
+      "quality": "1080p",
+      "region": "USA"
+    },
+    {
+      "id": "kids_3",
+      "name": "Disney XD HD",
+      "category": "Kids",
+      "quality": "1080p",
+      "region": "USA"
+    },
+    {
+      "id": "kids_4",
+      "name": "Nickelodeon HD",
+      "category": "Kids",
+      "quality": "1080p",
+      "region": "USA"
+    },
+    {
+      "id": "kids_5",
+      "name": "Nick Jr. HD",
+      "category": "Kids",
+      "quality": "1080p",
+      "region": "USA"
+    },
+    {
+      "id": "kids_6",
+      "name": "Cartoon Network HD",
+      "category": "Kids",
+      "quality": "1080p",
+      "region": "USA"
+    },
+    {
+      "id": "kids_7",
+      "name": "Boomerang HD",
+      "category": "Kids",
+      "quality": "1080p",
+      "region": "USA"
+    },
+    {
+      "id": "kids_8",
+      "name": "PBS Kids HD",
+      "category": "Kids",
+      "quality": "1080p",
+      "region": "USA"
+    },
+    {
+      "id": "kids_9",
+      "name": "Baby TV HD",
+      "category": "Kids",
+      "quality": "1080p",
+      "region": "UK"
+    },
+    {
+      "id": "kids_10",
+      "name": "CBeebies HD",
+      "category": "Kids",
+      "quality": "1080p",
+      "region": "UK"
+    },
+
+    {
+      "id": "music_1",
+      "name": "MTV HD",
+      "category": "Music",
+      "quality": "1080p",
+      "region": "USA"
+    },
+    {
+      "id": "music_2",
+      "name": "MTV Live HD",
+      "category": "Music",
+      "quality": "1080p",
+      "region": "USA"
+    },
+    {
+      "id": "music_3",
+      "name": "MTV Hits HD",
+      "category": "Music",
+      "quality": "1080p",
+      "region": "USA"
+    },
+    {
+      "id": "music_4",
+      "name": "VH1 HD",
+      "category": "Music",
+      "quality": "1080p",
+      "region": "USA"
+    },
+    {
+      "id": "music_5",
+      "name": "CMT HD",
+      "category": "Music",
+      "quality": "1080p",
+      "region": "USA"
+    },
+    {
+      "id": "music_6",
+      "name": "Trace Urban HD",
+      "category": "Music",
+      "quality": "1080p",
+      "region": "UK"
+    },
+    {
+      "id": "music_7",
+      "name": "Mezzo Live HD",
+      "category": "Music",
+      "quality": "1080p",
+      "region": "French"
+    },
+    {
+      "id": "music_8",
+      "name": "Stingray Music HD",
+      "category": "Music",
+      "quality": "1080p",
+      "region": "USA"
+    },
+
+    {
+      "id": "indian_1",
+      "name": "Star Plus HD",
+      "category": "Entertainment",
+      "quality": "1080p",
+      "region": "Indian"
+    },
+    {
+      "id": "indian_2",
+      "name": "Zee TV HD",
+      "category": "Entertainment",
+      "quality": "1080p",
+      "region": "Indian"
+    },
+    {
+      "id": "indian_3",
+      "name": "Colors HD",
+      "category": "Entertainment",
+      "quality": "1080p",
+      "region": "Indian"
+    },
+    {
+      "id": "indian_4",
+      "name": "Sony TV HD",
+      "category": "Entertainment",
+      "quality": "1080p",
+      "region": "Indian"
+    },
+    {
+      "id": "indian_5",
+      "name": "&TV HD",
+      "category": "Entertainment",
+      "quality": "1080p",
+      "region": "Indian"
+    },
+    {
+      "id": "indian_6",
+      "name": "Star Bharat HD",
+      "category": "Entertainment",
+      "quality": "1080p",
+      "region": "Indian"
+    },
+    {
+      "id": "indian_7",
+      "name": "Star Gold HD",
+      "category": "Movies",
+      "quality": "1080p",
+      "region": "Indian"
+    },
+    {
+      "id": "indian_8",
+      "name": "Zee Cinema HD",
+      "category": "Movies",
+      "quality": "1080p",
+      "region": "Indian"
+    },
+    {
+      "id": "indian_9",
+      "name": "Sony Max HD",
+      "category": "Movies",
+      "quality": "1080p",
+      "region": "Indian"
+    },
+    {
+      "id": "indian_10",
+      "name": "Colors Cineplex HD",
+      "category": "Movies",
+      "quality": "1080p",
+      "region": "Indian"
+    },
+    {
+      "id": "indian_11",
+      "name": "Star Sports 1 Hindi HD",
+      "category": "Sports",
+      "quality": "1080p",
+      "region": "Indian"
+    },
+    {
+      "id": "indian_12",
+      "name": "Star Sports 2 HD",
+      "category": "Sports",
+      "quality": "1080p",
+      "region": "Indian"
+    },
+    {
+      "id": "indian_13",
+      "name": "Sony Ten 1 HD",
+      "category": "Sports",
+      "quality": "1080p",
+      "region": "Indian"
+    },
+    {
+      "id": "indian_14",
+      "name": "Sony Ten 2 HD",
+      "category": "Sports",
+      "quality": "1080p",
+      "region": "Indian"
+    },
+    {
+      "id": "indian_15",
+      "name": "Sony Ten 3 HD",
+      "category": "Sports",
+      "quality": "1080p",
+      "region": "Indian"
+    },
+
+    {
+      "id": "turkish_1",
+      "name": "TRT 1 HD",
+      "category": "Entertainment",
+      "quality": "1080p",
+      "region": "Turkish"
+    },
+    {
+      "id": "turkish_2",
+      "name": "ATV HD",
+      "category": "Entertainment",
+      "quality": "1080p",
+      "region": "Turkish"
+    },
+    {
+      "id": "turkish_3",
+      "name": "Show TV HD",
+      "category": "Entertainment",
+      "quality": "1080p",
+      "region": "Turkish"
+    },
+    {
+      "id": "turkish_4",
+      "name": "Kanal D HD",
+      "category": "Entertainment",
+      "quality": "1080p",
+      "region": "Turkish"
+    },
+    {
+      "id": "turkish_5",
+      "name": "Star TV HD",
+      "category": "Entertainment",
+      "quality": "1080p",
+      "region": "Turkish"
+    },
+    {
+      "id": "turkish_6",
+      "name": "Fox TV HD",
+      "category": "Entertainment",
+      "quality": "1080p",
+      "region": "Turkish"
+    },
+    {
+      "id": "turkish_7",
+      "name": "TV8 HD",
+      "category": "Entertainment",
+      "quality": "1080p",
+      "region": "Turkish"
+    },
+    {
+      "id": "turkish_8",
+      "name": "TRT Spor HD",
+      "category": "Sports",
+      "quality": "1080p",
+      "region": "Turkish"
+    },
+    {
+      "id": "turkish_9",
+      "name": "beIN Sports Haber HD",
+      "category": "Sports",
+      "quality": "1080p",
+      "region": "Turkish"
+    },
+    {
+      "id": "turkish_10",
+      "name": "NTV HD",
+      "category": "News",
+      "quality": "1080p",
+      "region": "Turkish"
+    },
+
+    {
+      "id": "french_1",
+      "name": "TF1 HD",
+      "category": "Entertainment",
+      "quality": "1080p",
+      "region": "French"
+    },
+    {
+      "id": "french_2",
+      "name": "France 2 HD",
+      "category": "Entertainment",
+      "quality": "1080p",
+      "region": "French"
+    },
+    {
+      "id": "french_3",
+      "name": "France 3 HD",
+      "category": "Entertainment",
+      "quality": "1080p",
+      "region": "French"
+    },
+    {
+      "id": "french_4",
+      "name": "Canal+ HD",
+      "category": "Entertainment",
+      "quality": "1080p",
+      "region": "French"
+    },
+    {
+      "id": "french_5",
+      "name": "M6 HD",
+      "category": "Entertainment",
+      "quality": "1080p",
+      "region": "French"
+    },
+    {
+      "id": "french_6",
+      "name": "Arte HD",
+      "category": "Entertainment",
+      "quality": "1080p",
+      "region": "French"
+    },
+    {
+      "id": "french_7",
+      "name": "C8 HD",
+      "category": "Entertainment",
+      "quality": "1080p",
+      "region": "French"
+    },
+    {
+      "id": "french_8",
+      "name": "W9 HD",
+      "category": "Entertainment",
+      "quality": "1080p",
+      "region": "French"
+    },
+    {
+      "id": "french_9",
+      "name": "RMC Sport 1 HD",
+      "category": "Sports",
+      "quality": "1080p",
+      "region": "French"
+    },
+    {
+      "id": "french_10",
+      "name": "beIN Sports 1 FR HD",
+      "category": "Sports",
+      "quality": "1080p",
+      "region": "French"
+    }
+  ]
+} 
