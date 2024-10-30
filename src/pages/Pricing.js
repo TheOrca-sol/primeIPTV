@@ -362,7 +362,7 @@ function Pricing() {
   }, []);
 
   const handleSubscribe = (plan, period) => {
-    const phoneNumber = "0694461807";
+    const phoneNumber = "+212694461807";
     const referralCode = localStorage.getItem('primeiptv_referral');
     
     let message = `Hello! I would like to subscribe to the ${plan.name} plan (${period}):

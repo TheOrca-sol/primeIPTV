@@ -298,7 +298,7 @@ function Support() {
   ];
 
   const handleWhatsAppContact = () => {
-    const phoneNumber = "0694461807"; // Replace with your WhatsApp number
+    const phoneNumber = "+212694461807"; // Replace with your WhatsApp number
     const message = "Hi! I need help with your IPTV service.";
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');

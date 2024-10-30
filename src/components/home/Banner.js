@@ -156,14 +156,14 @@ const IllustrationWrapper = styled(motion.div)`
 
 function Banner() {
   const handleContact = () => {
-    const phoneNumber = "0694461807"; // Replace with your WhatsApp number
+    const phoneNumber = "+212694461807"; // Replace with your WhatsApp number
     const message = "Hi! I'm interested in your IPTV service. Can you provide more information?";
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
 
   const handleTrial = () => {
-    const phoneNumber = "0694461807"; // Replace with your WhatsApp number
+    const phoneNumber = "+212694461807"; // Replace with your WhatsApp number
     const message = "Hi! I would like to request a 24-hour trial of your IPTV service.";
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
