@@ -218,7 +218,7 @@ const plansData = {
     },
     {
       name: "Premium",
-      price: "19.99",
+      price: "12.99",
       period: "month",
       features: [
         "2000+ Live Channels",
@@ -232,7 +232,7 @@ const plansData = {
     },
     {
       name: "Family",
-      price: "29.99",
+      price: "19.99",
       period: "month",
       features: [
         "3000+ Live Channels",
@@ -264,9 +264,9 @@ const plansData = {
     },
     {
       name: "Premium",
-      price: "49.99",
+      price: "29.99",
       period: "quarter",
-      originalPrice: "59.97",
+      originalPrice: "38.97",
       features: [
         "2000+ Live Channels",
         "HD & 4K Quality",
@@ -276,13 +276,13 @@ const plansData = {
         "PPV Events Included"
       ],
       popular: true,
-      savings: "17%"
+      savings: "23%"
     },
     {
       name: "Family",
-      price: "74.99",
+      price: "44.99",
       period: "quarter",
-      originalPrice: "89.97",
+      originalPrice: "59.97",
       features: [
         "3000+ Live Channels",
         "HD & 4K Quality",
@@ -293,13 +293,13 @@ const plansData = {
         "Custom Channel List"
       ],
       popular: false,
-      savings: "17%"
+      savings: "25%"
     }
   ],
   yearly: [
     {
       name: "Basic",
-      price: "89.99",
+      price: "49.99",
       period: "year",
       originalPrice: "119.88",
       features: [
@@ -310,13 +310,13 @@ const plansData = {
         "24/7 Support"
       ],
       popular: false,
-      savings: "25%"
+      savings: "58%"
     },
     {
       name: "Premium",
-      price: "179.99",
+      price: "69.99",
       period: "year",
-      originalPrice: "239.88",
+      originalPrice: "155.88",
       features: [
         "2000+ Live Channels",
         "HD & 4K Quality",
@@ -326,13 +326,13 @@ const plansData = {
         "PPV Events Included"
       ],
       popular: true,
-      savings: "25%"
+      savings: "55%"
     },
     {
       name: "Family",
-      price: "269.99",
+      price: "99.99",
       period: "year",
-      originalPrice: "359.88",
+      originalPrice: "239.88",
       features: [
         "3000+ Live Channels",
         "HD & 4K Quality",
@@ -343,7 +343,7 @@ const plansData = {
         "Custom Channel List"
       ],
       popular: false,
-      savings: "25%"
+      savings: "58%"
     }
   ]
 };
