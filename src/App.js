@@ -9,6 +9,8 @@ import Pricing from './pages/Pricing';
 import Channels from './pages/Channels';
 import Support from './pages/Support';
 import Dashboard from './pages/Dashboard';
+import { useEffect } from 'react';
+import { handleReferral, logDebug } from './utils/referral';
 
 const theme = {
   colors: {
@@ -36,6 +38,12 @@ const MainContent = styled.main`
 `;
 
 function App() {
+  useEffect(() => {
+    logDebug('App mounted, checking referral');
+    const hasReferral = handleReferral();
+    logDebug('Initial referral check result:', hasReferral);
+  }, []);
+
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
-import { handleReferral } from '../utils/referral';
+import { handleReferral, trackSuccessfulReferral, logDebug } from '../utils/referral';
 import ReferralModal from '../components/common/ReferralModal';
 
 const PricingContainer = styled.div`
@@ -193,6 +193,14 @@ const ReferralButton = styled(motion.button)`
   cursor: pointer;
 `;
 
+const OriginalPrice = styled.span`
+  text-decoration: line-through;
+  opacity: 0.6;
+  font-size: 0.8em;
+  margin-left: 0.5rem;
+  color: ${props => props.theme.colors.text};
+`;
+
 const plansData = {
   monthly: [
     {
@@ -351,19 +359,28 @@ const WhatsAppIcon = () => (
 function Pricing() {
   const [selectedPeriod, setSelectedPeriod] = useState('monthly');
   const [showReferralModal, setShowReferralModal] = useState(false);
+  const [hasReferralDiscount, setHasReferralDiscount] = useState(false);
   
-  // Check if user came from a referral link
   useEffect(() => {
-    const hasReferral = handleReferral();
-    if (hasReferral) {
-      // Show special pricing or apply discount
-      // You can modify the plansData prices here
-    }
+    logDebug('Pricing component mounted');
+    const referralCode = localStorage.getItem('primeiptv_referral');
+    logDebug('Checking stored referral:', referralCode);
+    setHasReferralDiscount(!!referralCode);
   }, []);
+
+  // Add this function to apply referral discount
+  const getDiscountedPrice = (originalPrice) => {
+    return hasReferralDiscount ? originalPrice * 0.5 : originalPrice;
+  };
 
   const handleSubscribe = (plan, period) => {
     const phoneNumber = "+212694461807";
     const referralCode = localStorage.getItem('primeiptv_referral');
+    
+    // Track successful referral when user subscribes
+    if (referralCode) {
+      trackSuccessfulReferral(referralCode);
+    }
     
     let message = `Hello! I would like to subscribe to the ${plan.name} plan (${period}):
 - Price: $${plan.price}/${plan.period}
@@ -382,7 +399,6 @@ function Pricing() {
       <ReferralBanner
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
-        style={{ display: 'none' }}
       >
         🎁 Invite friends and get 1 Month Free! They'll receive 50% OFF their first month!
         <ReferralButton
@@ -428,12 +444,9 @@ function Pricing() {
               {plan.savings && <SaveBadge>Save {plan.savings}</SaveBadge>}
               <PlanName>{plan.name}</PlanName>
               <PlanPrice>
-                ${plan.price}
-                <span>/{plan.period}</span>
-                {plan.originalPrice && (
-                  <div style={{ fontSize: '1rem', textDecoration: 'line-through', opacity: 0.7 }}>
-                    ${plan.originalPrice}
-                  </div>
+                ${getDiscountedPrice(plan.price)}
+                {hasReferralDiscount && (
+                  <OriginalPrice>${plan.price}</OriginalPrice>
                 )}
               </PlanPrice>
               <FeaturesList>

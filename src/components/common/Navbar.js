@@ -1,7 +1,9 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { preserveReferralCode } from '../../utils/referral';
+
 
 const Nav = styled.nav`
   background: white;
@@ -88,21 +90,31 @@ const HamburgerLine = styled(motion.span)`
   display: block;
 `;
 
+const NavLinkWithRef = ({ to, children, ...props }) => {
+  const preservedPath = preserveReferralCode(to);
+  return (
+    <NavLink to={preservedPath} {...props}>
+      {children}
+    </NavLink>
+  );
+};
+
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
     <Nav>
       <NavContainer>
-        <Logo to="/">PrimeIPTV</Logo>
+        <Logo to={preserveReferralCode('/')}>PrimeIPTV</Logo>
         
         <NavLinks>
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/pricing">Pricing</NavLink>
-          <NavLink to="/channels">Channels</NavLink>
-          <NavLink to="/support">Support</NavLink>
+          <NavLinkWithRef to="/">Home</NavLinkWithRef>
+          <NavLinkWithRef to="/pricing">Pricing</NavLinkWithRef>
+          <NavLinkWithRef to="/channels">Channels</NavLinkWithRef>
+          <NavLinkWithRef to="/support">Support</NavLinkWithRef>
         </NavLinks>
 
         <HamburgerButton onClick={toggleMenu}>
@@ -119,10 +131,10 @@ function Navbar() {
               exit={{ x: '100%' }}
               transition={{ type: 'tween', duration: 0.3 }}
             >
-              <NavLink to="/" onClick={toggleMenu}>Home</NavLink>
-              <NavLink to="/pricing" onClick={toggleMenu}>Pricing</NavLink>
-              <NavLink to="/channels" onClick={toggleMenu}>Channels</NavLink>
-              <NavLink to="/support" onClick={toggleMenu}>Support</NavLink>
+              <NavLinkWithRef to="/" onClick={toggleMenu}>Home</NavLinkWithRef>
+              <NavLinkWithRef to="/pricing" onClick={toggleMenu}>Pricing</NavLinkWithRef>
+              <NavLinkWithRef to="/channels" onClick={toggleMenu}>Channels</NavLinkWithRef>
+              <NavLinkWithRef to="/support" onClick={toggleMenu}>Support</NavLinkWithRef>
             </MobileNavLinks>
           )}
         </AnimatePresence>

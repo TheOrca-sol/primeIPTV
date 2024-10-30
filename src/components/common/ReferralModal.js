@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 import { motion, AnimatePresence } from 'framer-motion';
-import { generateReferralCode, getReferralRewards } from '../../utils/referral';
+import { generateReferralCode, getReferralRewards, REFERRAL_STATS_KEY } from '../../utils/referral';
+import { FaWhatsapp, FaTelegram, FaFacebook, FaTwitter, FaEnvelope, FaCopy } from 'react-icons/fa';
+import { Snackbar, Alert } from '@mui/material';
+import { useState } from 'react';
 
 const WhatsAppIcon = () => (
   <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
@@ -62,10 +65,14 @@ const RewardCard = styled.div`
 
 const ShareOptionsGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
   width: 100%;
   margin: 1.5rem 0;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 `;
 
 const ShareOption = styled(motion.button)`
@@ -80,6 +87,11 @@ const ShareOption = styled(motion.button)`
   font-weight: 600;
   background: ${props => props.bg || props.theme.colors.primary};
   color: white;
+  
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
 `;
 
 const ReferralStats = styled.div`
@@ -113,38 +125,47 @@ function ReferralModal({ isOpen, onClose }) {
   const referralCode = generateReferralCode('user');
   const referralLink = `${window.location.origin}?ref=${referralCode}`;
   
-  // Get stats from localStorage
-  const referralStats = JSON.parse(localStorage.getItem('primeiptv_referral_stats') || '{"clicks": 0, "conversions": 0}');
+  // Get stats from localStorage with proper structure
+  const allStats = JSON.parse(localStorage.getItem('primeiptv_referral_stats') || '{}');
+  
+  // Calculate totals across all referral codes
+  const totalStats = Object.values(allStats).reduce((acc, stat) => {
+    acc.clicks += stat.clicks || 0;
+    acc.conversions += stat.conversions || 0;
+    return acc;
+  }, { clicks: 0, conversions: 0 });
+
+  const [openSnackbar, setOpenSnackbar] = useState(false);
 
   const handleShare = async (platform) => {
-    // Track share click
-    const stats = JSON.parse(localStorage.getItem('primeiptv_referral_stats') || '{"clicks": 0, "conversions": 0}');
-    stats.clicks += 1;
-    localStorage.setItem('primeiptv_referral_stats', JSON.stringify(stats));
+    const stats = JSON.parse(localStorage.getItem(REFERRAL_STATS_KEY) || '{}');
+    if (!stats[referralCode]) {
+      stats[referralCode] = { clicks: 0, conversions: 0 };
+    }
+    stats[referralCode].clicks += 1;
+    localStorage.setItem(REFERRAL_STATS_KEY, JSON.stringify(stats));
+
+    const shareText = `Get 50% OFF your first month of Premium IPTV! 📺 10,000+ channels, movies & sports in HD quality.`;
 
     switch (platform) {
       case 'whatsapp':
-        window.open(`https://wa.me/?text=${encodeURIComponent(`Get 50% OFF your first month of Premium IPTV! ${referralLink}`)}`, '_blank');
+        window.open(`https://wa.me/?text=${encodeURIComponent(`${shareText} ${referralLink}`)}`, '_blank');
         break;
       case 'telegram':
-        window.open(`https://t.me/share/url?url=${referralLink}&text=${encodeURIComponent('Get 50% OFF your first month of Premium IPTV!')}`, '_blank');
+        window.open(`https://t.me/share/url?url=${referralLink}&text=${encodeURIComponent(shareText)}`, '_blank');
+        break;
+      case 'facebook':
+        window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(referralLink)}`, '_blank');
+        break;
+      case 'twitter':
+        window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(`${shareText} ${referralLink}`)}`, '_blank');
+        break;
+      case 'email':
+        window.location.href = `mailto:?subject=Premium IPTV Offer&body=${encodeURIComponent(`${shareText}\n\n${referralLink}`)}`;
         break;
       case 'copy':
-        navigator.clipboard.writeText(referralLink);
-        alert('Referral link copied to clipboard!');
-        break;
-      case 'share':
-        if (navigator.share) {
-          try {
-            await navigator.share({
-              title: 'Join Prime IPTV',
-              text: 'Get 50% OFF your first month of Premium IPTV service!',
-              url: referralLink
-            });
-          } catch (err) {
-            console.log('Error sharing:', err);
-          }
-        }
+        navigator.clipboard.writeText(`${referralLink}`);
+        setOpenSnackbar(true);
         break;
     }
   };
@@ -177,7 +198,7 @@ function ReferralModal({ isOpen, onClose }) {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <WhatsAppIcon /> WhatsApp
+                <FaWhatsapp /> WhatsApp
               </ShareOption>
               <ShareOption
                 bg="#0088cc"
@@ -185,7 +206,31 @@ function ReferralModal({ isOpen, onClose }) {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <TelegramIcon /> Telegram
+                <FaTelegram /> Telegram
+              </ShareOption>
+              <ShareOption
+                bg="#1877f2"
+                onClick={() => handleShare('facebook')}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <FaFacebook /> Facebook
+              </ShareOption>
+              <ShareOption
+                bg="#1da1f2"
+                onClick={() => handleShare('twitter')}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <FaTwitter /> Twitter
+              </ShareOption>
+              <ShareOption
+                bg="#ea4335"
+                onClick={() => handleShare('email')}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <FaEnvelope /> Email
               </ShareOption>
               <ShareOption
                 bg="#666"
@@ -193,30 +238,38 @@ function ReferralModal({ isOpen, onClose }) {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <CopyIcon /> Copy Link
-              </ShareOption>
-              <ShareOption
-                onClick={() => handleShare('share')}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <ShareIcon /> More Options
+                <FaCopy /> Copy Link
               </ShareOption>
             </ShareOptionsGrid>
 
             <ReferralStats>
               <StatItem>
-                <StatValue>{referralStats.clicks}</StatValue>
+                <StatValue>{totalStats.clicks}</StatValue>
                 <StatLabel>Total Shares</StatLabel>
               </StatItem>
               <StatItem>
-                <StatValue>{referralStats.conversions}</StatValue>
+                <StatValue>{totalStats.conversions}</StatValue>
                 <StatLabel>Successful Referrals</StatLabel>
               </StatItem>
             </ReferralStats>
           </ModalContent>
         </ModalOverlay>
       )}
+      <Snackbar 
+        open={openSnackbar} 
+        autoHideDuration={3000} 
+        onClose={() => setOpenSnackbar(false)}
+        anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+      >
+        <Alert 
+          onClose={() => setOpenSnackbar(false)} 
+          severity="success" 
+          variant="filled"
+          sx={{ width: '100%' }}
+        >
+          Referral link copied to clipboard!
+        </Alert>
+      </Snackbar>
     </AnimatePresence>
   );
 }
