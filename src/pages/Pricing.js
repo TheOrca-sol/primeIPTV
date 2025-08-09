@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { trackSuccessfulReferral, logDebug } from '../utils/referral';
 import ReferralModal from '../components/common/ReferralModal';
 import SEO from '../components/common/SEO';
+import { useTranslation } from 'react-i18next';
 
 const PricingContainer = styled.div`
   max-width: 1200px;
@@ -358,6 +359,7 @@ const WhatsAppIcon = () => (
 
 
 function Pricing() {
+  const { t } = useTranslation();
   const [selectedPeriod, setSelectedPeriod] = useState('monthly');
   const [showReferralModal, setShowReferralModal] = useState(false);
   const [hasReferralDiscount, setHasReferralDiscount] = useState(false);

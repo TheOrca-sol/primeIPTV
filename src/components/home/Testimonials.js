@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 const TestimonialsContainer = styled.div`
   max-width: 1200px;
@@ -78,34 +79,17 @@ const CustomerLocation = styled.span`
   gap: 0.3rem;
 `;
 
-const testimonials = [
-  {
-    quote: "IPTV Beam is the best IPTV service I've used. Crystal clear HD quality and never buffers. Customer support is always responsive!",
-    name: "John D.",
-    location: "United States",
-    flag: "🇺🇸",
-    initials: "JD"
-  },
-  {
-    quote: "IPTV Beam has excellent channel selection and VOD library. The 4K content is amazing, and setup was super easy.",
-    name: "Sarah M.",
-    location: "United Kingdom",
-    flag: "🇬🇧",
-    initials: "SM"
-  },
-  {
-    quote: "IPTV Beam - service parfait avec des chaînes françaises en HD. Le support client est très réactif.",
-    name: "Pierre L.",
-    location: "France",
-    flag: "🇫🇷",
-    initials: "PL"
-  }
-];
+// Testimonials data is now handled in the component using translations
 
 function Testimonials() {
+  const { t } = useTranslation();
+
+  // Get testimonials from translations - this allows for dynamic testimonials per language
+  const testimonials = t('testimonials.items', { returnObjects: true });
+
   return (
     <TestimonialsContainer>
-      <Title>What Our Customers Say</Title>
+      <Title>{t('testimonials.title')}</Title>
       <TestimonialsGrid>
         {testimonials.map((testimonial, index) => (
           <TestimonialCard
@@ -116,11 +100,11 @@ function Testimonials() {
           >
             <Quote>"{testimonial.quote}"</Quote>
             <CustomerInfo>
-              <Avatar>{testimonial.initials}</Avatar>
+              <Avatar>{testimonial.name.charAt(0)}{testimonial.name.split(' ')[1]?.charAt(0) || ''}</Avatar>
               <CustomerDetails>
                 <CustomerName>{testimonial.name}</CustomerName>
                 <CustomerLocation>
-                  {testimonial.flag} {testimonial.location}
+                  {testimonial.location}
                 </CustomerLocation>
               </CustomerDetails>
             </CustomerInfo>

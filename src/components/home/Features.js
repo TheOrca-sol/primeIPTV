@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const FeaturesGrid = styled.div`
   display: grid;
@@ -46,52 +47,56 @@ const FeatureLink = styled(Link)`
   }
 `;
 
-const features = [
-  {
-    icon: "📺",
-    title: "10,000+ Channels",
-    description: "Access to premium channels from USA, UK, Canada, and worldwide",
-    link: "/channels",
-    linkText: "Explore our channel list"
-  },
-  {
-    icon: "🎬",
-    title: "Movies & Series",
-    description: "Huge VOD library with latest movies and TV shows in HD and 4K",
-    link: "/channels",
-    linkText: "Browse movie channels"
-  },
-  {
-    icon: "📱",
-    title: "Multi-Platform",
-    description: "Works on Smart TV, Android, iOS, MAG, and Formuler boxes",
-    link: "/support",
-    linkText: "View setup guides"
-  },
-  {
-    icon: "⚡",
-    title: "Premium Quality",
-    description: "HD and 4K quality streams with zero buffering guaranteed",
-    link: "/pricing",
-    linkText: "Check our plans"
-  },
-  {
-    icon: "🌍",
-    title: "Sports Coverage",
-    description: "All major sports channels including PPV events and live matches",
-    link: "/channels",
-    linkText: "See sports channels"
-  },
-  {
-    icon: "🎮",
-    title: "Easy Setup",
-    description: "Quick installation with 24/7 support via WhatsApp",
-    link: "/support",
-    linkText: "Get help now"
-  }
-];
+// Features data is now handled in the component using translations
 
 function Features() {
+  const { t } = useTranslation();
+
+  const features = [
+    {
+      icon: "📺",
+      titleKey: "features.items.channels.title",
+      descriptionKey: "features.items.channels.description", 
+      linkKey: "features.items.channels.link",
+      link: "/channels"
+    },
+    {
+      icon: "🎬",
+      titleKey: "features.items.movies.title",
+      descriptionKey: "features.items.movies.description",
+      linkKey: "features.items.movies.link", 
+      link: "/channels"
+    },
+    {
+      icon: "📱",
+      titleKey: "features.items.multiPlatform.title",
+      descriptionKey: "features.items.multiPlatform.description",
+      linkKey: "features.items.multiPlatform.link",
+      link: "/support"
+    },
+    {
+      icon: "⚡",
+      titleKey: "features.items.quality.title", 
+      descriptionKey: "features.items.quality.description",
+      linkKey: "features.items.quality.link",
+      link: "/pricing"
+    },
+    {
+      icon: "🌍",
+      titleKey: "features.items.sports.title",
+      descriptionKey: "features.items.sports.description", 
+      linkKey: "features.items.sports.link",
+      link: "/channels"
+    },
+    {
+      icon: "🎮", 
+      titleKey: "features.items.setup.title",
+      descriptionKey: "features.items.setup.description",
+      linkKey: "features.items.setup.link",
+      link: "/support"
+    }
+  ];
+
   return (
     <FeaturesGrid>
       {features.map((feature, index) => (
@@ -101,10 +106,10 @@ function Features() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: index * 0.2 }}
         >
-          <FeatureIcon role="img" aria-label={feature.title}>{feature.icon}</FeatureIcon>
-          <FeatureTitle>{feature.title}</FeatureTitle>
-          <FeatureDescription>{feature.description}</FeatureDescription>
-          <FeatureLink to={feature.link}>{feature.linkText} →</FeatureLink>
+          <FeatureIcon role="img" aria-label={t(feature.titleKey)}>{feature.icon}</FeatureIcon>
+          <FeatureTitle>{t(feature.titleKey, { count: '10,000' })}</FeatureTitle>
+          <FeatureDescription>{t(feature.descriptionKey)}</FeatureDescription>
+          <FeatureLink to={feature.link}>{t(feature.linkKey)} →</FeatureLink>
         </FeatureCard>
       ))}
     </FeaturesGrid>

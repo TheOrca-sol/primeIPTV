@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { useTranslation } from 'react-i18next';
 
 const FooterContainer = styled.footer`
   background: ${props => props.theme.colors.text};
@@ -14,10 +15,12 @@ const FooterContent = styled.div`
 `;
 
 function Footer() {
+  const { t } = useTranslation();
+  
   return (
     <FooterContainer>
       <FooterContent>
-        <p>&copy; {new Date().getFullYear()} IPTV Beam. All rights reserved.</p>
+        <p>{t('footer.copyright', { year: new Date().getFullYear() })}</p>
       </FooterContent>
     </FooterContainer>
   );
