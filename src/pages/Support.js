@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 import SEO from '../components/common/SEO';
+import { useTranslation } from 'react-i18next';
 
 const WhatsAppIcon = () => (
   <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
@@ -241,31 +242,12 @@ const itemVariants = {
 };
 
 function Support() {
+  const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState('faq');
   const [expandedFAQ, setExpandedFAQ] = useState(null);
 
-  const faqs = [
-    {
-      question: "How do I get started?",
-      answer: "Simply contact us via WhatsApp to choose your subscription plan. Once payment is confirmed, we'll send you your login credentials and setup instructions immediately."
-    },
-    {
-      question: "What devices are supported?",
-      answer: "Our service works on Smart TVs, Android boxes/devices, iOS devices, MAG boxes, Formuler, and any device that supports IPTV players like IPTV Smarters Pro, TiviMate, or GSE IPTV."
-    },
-    {
-      question: "Do you offer a trial?",
-      answer: "Yes, we offer a 24-hour trial to test our service. Contact us on WhatsApp to request a trial."
-    },
-    {
-      question: "What channels are included?",
-      answer: "We offer 10,000+ channels including USA, UK, Canada, Sports, Movies, and international channels. All premium channels and PPV events are included."
-    },
-    {
-      question: "How stable is the service?",
-      answer: "We use premium servers with 99.9% uptime and automatic backup servers. Our streams are high quality with minimal to no buffering."
-    }
-  ];
+  // Get FAQs from translations
+  const faqs = t('support.faq', { returnObjects: true, count: '10,000' });
 
   const supportStructuredData = {
     "@context": "https://schema.org",
@@ -312,8 +294,8 @@ function Support() {
   ];
 
   const handleWhatsAppContact = () => {
-    const phoneNumber = "+212694461807"; // Replace with your WhatsApp number
-    const message = "Hi! I need help with IPTV Beam service.";
+    const phoneNumber = "+212694461807";
+    const message = t('whatsapp.support');
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
@@ -332,20 +314,24 @@ function Support() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        How Can We Help You?
+{t('support.title')}
       </Title>
       
       <TabContainer>
         <TabButtons>
-          {['FAQ', 'Contact Us', 'Setup Guides'].map((tab) => (
+          {[
+            { key: 'faq', label: t('support.tabs.faq') },
+            { key: 'contactus', label: t('support.tabs.contact') },
+            { key: 'setupguides', label: t('support.tabs.guides') }
+          ].map((tab) => (
             <TabButton
-              key={tab}
-              active={activeTab === tab.toLowerCase().replace(' ', '')}
-              onClick={() => setActiveTab(tab.toLowerCase().replace(' ', ''))}
+              key={tab.key}
+              active={activeTab === tab.key}
+              onClick={() => setActiveTab(tab.key)}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              {tab}
+              {tab.label}
             </TabButton>
           ))}
         </TabButtons>

@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import SEO from '../components/common/SEO';
+import { useTranslation } from 'react-i18next';
 
 const ChannelsContainer = styled.div`
   max-width: 1200px;
@@ -238,6 +239,7 @@ const CTASection = styled.div`
 `;
 
 function Channels() {
+  const { t } = useTranslation();
   const channelsStructuredData = {
     "@context": "https://schema.org",
     "@type": "WebPage",
@@ -290,7 +292,7 @@ function Channels() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        Premium Channel Selection
+{t('channels.title')}
       </Title>
 
       <InfoBanner
@@ -298,26 +300,26 @@ function Channels() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.2 }}
       >
-        <InfoTitle>Access Over 10,000+ Premium Channels</InfoTitle>
+        <InfoTitle>{t('channels.subtitle', { count: '10,000' })}</InfoTitle>
         <InfoText>
-          Enjoy unlimited entertainment with our extensive collection of channels including Sports, Movies, News, and International content. All channels available in HD and 4K quality.
+          {t('channels.description')}
         </InfoText>
         <ChannelStats>
           <StatItem>
-            <span>10,000+</span>
-            <small>Live Channels</small>
+            <span>{t('channels.stats.channels', { count: '10,000' })}</span>
+            <small>{t('channels.stats.channelsLabel')}</small>
           </StatItem>
           <StatItem>
-            <span>4K</span>
-            <small>Ultra HD Quality</small>
+            <span>{t('channels.stats.quality')}</span>
+            <small>{t('channels.stats.qualityLabel')}</small>
           </StatItem>
           <StatItem>
-            <span>100+</span>
-            <small>Countries</small>
+            <span>{t('channels.stats.countries', { count: '100' })}</span>
+            <small>{t('channels.stats.countriesLabel')}</small>
           </StatItem>
           <StatItem>
-            <span>24/7</span>
-            <small>Support</small>
+            <span>{t('channels.stats.support')}</span>
+            <small>{t('channels.stats.supportLabel')}</small>
           </StatItem>
         </ChannelStats>
       </InfoBanner>
@@ -326,38 +328,40 @@ function Channels() {
         <CategoryCard
           whileHover={{ y: -5, boxShadow: '0 8px 12px rgba(0,0,0,0.1)' }}
         >
-          <h3>🏆 Sports</h3>
-          <p>ESPN, Sky Sports, beIN Sports, and all PPV events</p>
+          <h3>{t('channels.categories.sports.title')}</h3>
+          <p>{t('channels.categories.sports.description')}</p>
         </CategoryCard>
         <CategoryCard
           whileHover={{ y: -5, boxShadow: '0 8px 12px rgba(0,0,0,0.1)' }}
         >
-          <h3>🎬 Movies & Series</h3>
-          <p>Netflix, HBO, Disney+, Amazon Prime, and more</p>
+          <h3>{t('channels.categories.movies.title')}</h3>
+          <p>{t('channels.categories.movies.description')}</p>
         </CategoryCard>
         <CategoryCard
           whileHover={{ y: -5, boxShadow: '0 8px 12px rgba(0,0,0,0.1)' }}
         >
-          <h3>📺 Entertainment</h3>
-          <p>ABC, NBC, CBS, FOX, and international networks</p>
+          <h3>{t('channels.categories.entertainment.title')}</h3>
+          <p>{t('channels.categories.entertainment.description')}</p>
         </CategoryCard>
         <CategoryCard
           whileHover={{ y: -5, boxShadow: '0 8px 12px rgba(0,0,0,0.1)' }}
         >
-          <h3>🌍 International</h3>
-          <p>UK, Arabic, Indian, Turkish, French channels</p>
+          <h3>{t('channels.categories.international.title')}</h3>
+          <p>{t('channels.categories.international.description')}</p>
         </CategoryCard>
       </CategoryGrid>
 
       <CTASection>
-        <h2>Get Access to All Channels</h2>
-        <p>Contact us now to receive the full channel list and start watching! Need help getting started? Check our <Link to="/support" style={{ color: '#2563eb', textDecoration: 'underline' }}>setup guides and support</Link>.</p>
+        <h2>{t('channels.cta.title')}</h2>
+        <p>{t('channels.cta.description', { 
+          supportLink: <Link to="/support" style={{ color: '#2563eb', textDecoration: 'underline' }}>{t('channels.cta.supportLink')}</Link>
+        })}</p>
         <CTAButton
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           onClick={() => window.location.href = '/pricing'}
         >
-          View Pricing Plans
+          {t('channels.cta.button')}
         </CTAButton>
       </CTASection>
     </ChannelsContainer>

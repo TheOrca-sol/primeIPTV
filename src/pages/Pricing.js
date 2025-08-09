@@ -43,7 +43,7 @@ const PlanCard = styled(motion.div)`
   ${props => props.popular && `
     border: 2px solid ${props.theme.colors.primary};
     &::before {
-      content: 'Most Popular';
+      content: attr(data-popular-text);
       position: absolute;
       top: 1.5rem;
       right: -4rem;
@@ -451,35 +451,35 @@ function Pricing() {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        🎁 Invite friends and get 1 Month Free! They'll receive 50% OFF their first month!
+        {t('pricing.referralBanner')}
         <ReferralButton
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           onClick={() => setShowReferralModal(true)}
         >
-          Share & Earn
+{t('pricing.shareEarn')}
         </ReferralButton>
       </ReferralBanner>
 
-      <Title>Choose Your Plan</Title>
+      <Title>{t('pricing.title')}</Title>
       <PeriodSelector>
         <PeriodButton 
           active={selectedPeriod === 'monthly'} 
           onClick={() => setSelectedPeriod('monthly')}
         >
-          Monthly
+          {t('pricing.periods.monthly')}
         </PeriodButton>
         <PeriodButton 
           active={selectedPeriod === 'quarterly'} 
           onClick={() => setSelectedPeriod('quarterly')}
         >
-          Quarterly
+          {t('pricing.periods.quarterly')}
         </PeriodButton>
         <PeriodButton 
           active={selectedPeriod === 'yearly'} 
           onClick={() => setSelectedPeriod('yearly')}
         >
-          Yearly
+          {t('pricing.periods.yearly')}
         </PeriodButton>
       </PeriodSelector>
       <PlansGrid>
@@ -487,13 +487,14 @@ function Pricing() {
           <PlanCard
             key={index}
             popular={plan.popular}
+            data-popular-text={t('pricing.mostPopular')}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
           >
             <PlanContent>
-              {plan.savings && <SaveBadge>Save {plan.savings}</SaveBadge>}
-              <PlanName>{plan.name}</PlanName>
+              {plan.savings && <SaveBadge>{t('pricing.save', { percent: plan.savings })}</SaveBadge>}
+              <PlanName>{t(`pricing.plans.${plan.name.toLowerCase()}.name`)}</PlanName>
               <PlanPrice>
                 ${getDiscountedPrice(plan.price)}
                 {hasReferralDiscount && (
@@ -501,7 +502,12 @@ function Pricing() {
                 )}
               </PlanPrice>
               <FeaturesList>
-                {plan.features.map((feature, idx) => (
+                {t(`pricing.plans.${plan.name.toLowerCase()}.features`, { 
+                  returnObjects: true,
+                  count: plan.name === 'Basic' ? '5,000' : plan.name === 'Premium' ? '7,000' : '10,000',
+                  days: plan.name === 'Basic' ? '3' : '7',
+                  devices: plan.name === 'Basic' ? '1' : plan.name === 'Premium' ? '2' : '5'
+                }).map((feature, idx) => (
                   <Feature key={idx}>{feature}</Feature>
                 ))}
               </FeaturesList>
@@ -514,7 +520,7 @@ function Pricing() {
                 onClick={() => handleSubscribe(plan, selectedPeriod)}
               >
                 <WhatsAppIcon />
-                Subscribe via WhatsApp
+                {t('common.subscribe')}
               </SubscribeButton>
             </ButtonWrapper>
           </PlanCard>
