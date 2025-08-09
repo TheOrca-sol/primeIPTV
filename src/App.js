@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
+import { HelmetProvider } from 'react-helmet-async';
 import styled from 'styled-components';
 import GlobalStyles from './styles/GlobalStyles';
 import Navbar from './components/common/Navbar';
@@ -8,7 +9,7 @@ import Home from './pages/Home';
 import Pricing from './pages/Pricing';
 import Channels from './pages/Channels';
 import Support from './pages/Support';
-import Dashboard from './pages/Dashboard';
+
 import { useEffect } from 'react';
 import { handleReferral, logDebug } from './utils/referral';
 
@@ -45,23 +46,25 @@ function App() {
   }, []);
 
   return (
-    <ThemeProvider theme={theme}>
-      <GlobalStyles />
-      <BrowserRouter>
-        <AppContainer>
-          <Navbar />
-          <MainContent>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/pricing" element={<Pricing />} />
-              <Route path="/channels" element={<Channels />} />
-              <Route path="/support" element={<Support />} />
-            </Routes>
-          </MainContent>
-          <Footer />
-        </AppContainer>
-      </BrowserRouter>
-    </ThemeProvider>
+    <HelmetProvider>
+      <ThemeProvider theme={theme}>
+        <GlobalStyles />
+        <BrowserRouter>
+          <AppContainer>
+            <Navbar />
+            <MainContent>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/pricing" element={<Pricing />} />
+                <Route path="/channels" element={<Channels />} />
+                <Route path="/support" element={<Support />} />
+              </Routes>
+            </MainContent>
+            <Footer />
+          </AppContainer>
+        </BrowserRouter>
+      </ThemeProvider>
+    </HelmetProvider>
   );
 }
 

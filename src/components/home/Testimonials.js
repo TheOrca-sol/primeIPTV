@@ -80,21 +80,21 @@ const CustomerLocation = styled.span`
 
 const testimonials = [
   {
-    quote: "Best IPTV service I've used. Crystal clear HD quality and never buffers. Customer support is always responsive!",
+    quote: "IPTV Beam is the best IPTV service I've used. Crystal clear HD quality and never buffers. Customer support is always responsive!",
     name: "John D.",
     location: "United States",
     flag: "🇺🇸",
     initials: "JD"
   },
   {
-    quote: "Excellent channel selection and VOD library. The 4K content is amazing, and setup was super easy.",
+    quote: "IPTV Beam has excellent channel selection and VOD library. The 4K content is amazing, and setup was super easy.",
     name: "Sarah M.",
     location: "United Kingdom",
     flag: "🇬🇧",
     initials: "SM"
   },
   {
-    quote: "Service parfait avec des chaînes françaises en HD. Le support client est très réactif.",
+    quote: "IPTV Beam - service parfait avec des chaînes françaises en HD. Le support client est très réactif.",
     name: "Pierre L.",
     location: "France",
     flag: "🇫🇷",

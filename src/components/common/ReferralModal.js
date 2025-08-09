@@ -145,7 +145,7 @@ function ReferralModal({ isOpen, onClose }) {
     stats[referralCode].clicks += 1;
     localStorage.setItem(REFERRAL_STATS_KEY, JSON.stringify(stats));
 
-    const shareText = `Get 50% OFF your first month of Premium IPTV! 📺 10,000+ channels, movies & sports in HD quality.`;
+    const shareText = `Get 50% OFF your first month of IPTV Beam! 📺 10,000+ channels, movies & sports in HD quality.`;
 
     switch (platform) {
       case 'whatsapp':
@@ -161,7 +161,7 @@ function ReferralModal({ isOpen, onClose }) {
         window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(`${shareText} ${referralLink}`)}`, '_blank');
         break;
       case 'email':
-        window.location.href = `mailto:?subject=Premium IPTV Offer&body=${encodeURIComponent(`${shareText}\n\n${referralLink}`)}`;
+        window.location.href = `mailto:?subject=IPTV Beam Premium Offer&body=${encodeURIComponent(`${shareText}\n\n${referralLink}`)}`;
         break;
       case 'copy':
         navigator.clipboard.writeText(`${referralLink}`);

@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
+import SEO from '../components/common/SEO';
 
 const WhatsAppIcon = () => (
   <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
@@ -266,6 +267,19 @@ function Support() {
     }
   ];
 
+  const supportStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+
   const setupGuides = [
     {
       title: "Smart TV Setup",
@@ -299,13 +313,20 @@ function Support() {
 
   const handleWhatsAppContact = () => {
     const phoneNumber = "+212694461807"; // Replace with your WhatsApp number
-    const message = "Hi! I need help with your IPTV service.";
+    const message = "Hi! I need help with IPTV Beam service.";
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
 
   return (
     <SupportContainer>
+      <SEO 
+        title="IPTV Beam Support – FAQs, Setup Guides & Contact"
+        description="Get help with installation, device setup and account management. Read frequently asked questions or contact our 24/7 support via WhatsApp."
+        keywords="IPTV support, IPTV help, IPTV setup guide, IPTV FAQ, IPTV customer service, IPTV installation"
+        canonical="https://iptvbeam.com/support"
+        structuredData={supportStructuredData}
+      />
       <Title
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}

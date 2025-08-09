@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
-import { handleReferral, trackSuccessfulReferral, logDebug } from '../utils/referral';
+import { trackSuccessfulReferral, logDebug } from '../utils/referral';
 import ReferralModal from '../components/common/ReferralModal';
+import SEO from '../components/common/SEO';
 
 const PricingContainer = styled.div`
   max-width: 1200px;
@@ -394,8 +395,56 @@ function Pricing() {
     window.open(whatsappUrl, '_blank');
   };
 
+  const pricingStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "IPTV Beam Pricing Plans",
+    "description": "Compare our Basic, Premium and Family IPTV plans. Enjoy affordable monthly, quarterly or yearly subscriptions with catch-up, 4K quality and pay-per-view events.",
+    "url": "https://iptvbeam.com/pricing",
+    "mainEntity": {
+      "@type": "Product",
+      "name": "IPTV Beam Service",
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Basic Plan",
+          "price": "9.99",
+          "priceCurrency": "USD",
+          "priceValidUntil": "2025-12-31",
+          "availability": "https://schema.org/InStock",
+          "description": "1000+ Live Channels, HD Quality, 7 Days Catchup, 1 Device, 24/7 Support"
+        },
+        {
+          "@type": "Offer",
+          "name": "Premium Plan",
+          "price": "12.99",
+          "priceCurrency": "USD",
+          "priceValidUntil": "2025-12-31",
+          "availability": "https://schema.org/InStock",
+          "description": "2000+ Live Channels, HD & 4K Quality, 14 Days Catchup, 1 Device, 24/7 Priority Support, PPV Events Included"
+        },
+        {
+          "@type": "Offer",
+          "name": "Family Plan",
+          "price": "19.99",
+          "priceCurrency": "USD",
+          "priceValidUntil": "2025-12-31",
+          "availability": "https://schema.org/InStock",
+          "description": "3000+ Live Channels, HD & 4K Quality, 30 Days Catchup, 1 Device, 24/7 VIP Support, PPV Events Included, Custom Channel List"
+        }
+      ]
+    }
+  };
+
   return (
     <PricingContainer>
+      <SEO 
+        title="IPTV Beam Pricing – Choose Your Plan & Start Watching Today"
+        description="Compare our Basic, Premium and Family IPTV plans. Enjoy affordable monthly, quarterly or yearly subscriptions with catch-up, 4K quality and pay-per-view events."
+        keywords="IPTV pricing, IPTV plans, IPTV subscription, cheap IPTV, premium IPTV service, IPTV packages"
+        canonical="https://iptvbeam.com/pricing"
+        structuredData={pricingStructuredData}
+      />
       <ReferralBanner
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}

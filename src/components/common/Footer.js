@@ -17,7 +17,7 @@ function Footer() {
   return (
     <FooterContainer>
       <FooterContent>
-        <p>&copy; {new Date().getFullYear()} PrimeIPTV. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} IPTV Beam. All rights reserved.</p>
       </FooterContent>
     </FooterContainer>
   );

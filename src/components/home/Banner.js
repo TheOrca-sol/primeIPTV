@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const BannerContainer = styled.div`
   min-height: 80vh;
@@ -157,14 +158,14 @@ const IllustrationWrapper = styled(motion.div)`
 function Banner() {
   const handleContact = () => {
     const phoneNumber = "+212694461807"; // Replace with your WhatsApp number
-    const message = "Hi! I'm interested in your IPTV service. Can you provide more information?";
+    const message = "Hi! I'm interested in IPTV Beam service. Can you provide more information?";
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
 
   const handleTrial = () => {
     const phoneNumber = "+212694461807"; // Replace with your WhatsApp number
-    const message = "Hi! I would like to request a 24-hour trial of your IPTV service.";
+    const message = "Hi! I would like to request a 24-hour trial of IPTV Beam service.";
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
@@ -177,7 +178,7 @@ function Banner() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          Premium <HighlightSpan>IPTV</HighlightSpan> Service
+          <HighlightSpan>IPTV Beam</HighlightSpan> Premium Service
           <br />For Your Entertainment
         </BannerTitle>
         <BannerSubtitle
@@ -185,8 +186,8 @@ function Banner() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          Access 10,000+ live channels, movies, and TV shows in HD quality.
-          Watch anywhere, anytime, on any device.
+          Access <Link to="/channels" style={{ color: 'inherit', textDecoration: 'underline' }}>10,000+ live channels</Link>, movies, and TV shows in HD quality.
+          Watch anywhere, anytime, on any device. <Link to="/pricing" style={{ color: 'inherit', textDecoration: 'underline' }}>View our affordable pricing plans</Link>.
         </BannerSubtitle>
         <ButtonGroup
           initial={{ opacity: 0, y: 20 }}
@@ -234,11 +235,11 @@ function Banner() {
         transition={{ duration: 0.6, delay: 0.3 }}
       >
         <motion.img
-          src="/tv-mockup.jpg" // Replace with your actual image path
-          alt="IPTV Streaming"
+          src="/tv-mockup.jpg"
+          alt="Premium IPTV service streaming on smart TV showing live channels, movies and sports in high definition quality"
           style={{
-            filter: 'drop-shadow(0px 10px 20px rgba(37, 99, 235, 0.2))', // Added subtle shadow
-            borderRadius: '20px' // Added rounded corners
+            filter: 'drop-shadow(0px 10px 20px rgba(37, 99, 235, 0.2))',
+            borderRadius: '20px'
           }}
           whileHover={{ scale: 1.02 }}
           transition={{ duration: 0.3 }}

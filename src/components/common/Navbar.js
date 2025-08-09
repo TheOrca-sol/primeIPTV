@@ -108,7 +108,7 @@ function Navbar() {
   return (
     <Nav>
       <NavContainer>
-        <Logo to={preserveReferralCode('/')}>PrimeIPTV</Logo>
+        <Logo to={preserveReferralCode('/')}>IPTV Beam</Logo>
         
         <NavLinks>
           <NavLinkWithRef to="/">Home</NavLinkWithRef>

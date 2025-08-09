@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import { useState, useEffect } from 'react';
-import channelsData from '../data/channels.json';
+import { Link } from 'react-router-dom';
+import SEO from '../components/common/SEO';
 
 const ChannelsContainer = styled.div`
   max-width: 1200px;
@@ -238,8 +238,53 @@ const CTASection = styled.div`
 `;
 
 function Channels() {
+  const channelsStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "IPTV Beam Channels & Categories",
+    "description": "Discover sports, movies, entertainment and international channels included in IPTV Beam. All channels available in HD and 4K quality.",
+    "url": "https://iptvbeam.com/channels",
+    "mainEntity": {
+      "@type": "ItemList",
+      "name": "IPTV Channel Categories",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Sports Channels",
+          "description": "ESPN, Sky Sports, beIN Sports, and all PPV events"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Movies & Series",
+          "description": "Netflix, HBO, Disney+, Amazon Prime, and more"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Entertainment",
+          "description": "ABC, NBC, CBS, FOX, and international networks"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "International",
+          "description": "UK, Arabic, Indian, Turkish, French channels"
+        }
+      ]
+    }
+  };
+
   return (
     <ChannelsContainer>
+      <SEO 
+        title="Channels & Categories – Explore 10,000+ IPTV Channels"
+        description="Discover sports, movies, entertainment and international channels included in IPTV Beam. All channels available in HD and 4K quality."
+        keywords="IPTV channels, live TV channels, sports channels, movie channels, international channels, HD channels, 4K channels"
+        canonical="https://iptvbeam.com/channels"
+        structuredData={channelsStructuredData}
+      />
       <Title
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -306,7 +351,7 @@ function Channels() {
 
       <CTASection>
         <h2>Get Access to All Channels</h2>
-        <p>Contact us now to receive the full channel list and start watching!</p>
+        <p>Contact us now to receive the full channel list and start watching! Need help getting started? Check our <Link to="/support" style={{ color: '#2563eb', textDecoration: 'underline' }}>setup guides and support</Link>.</p>
         <CTAButton
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
