@@ -1,0 +1,193 @@
+{
+  "common": {
+    "loading": "Laden...",
+    "error": "Fout",
+    "success": "Succes",
+    "contact": "Contact",
+    "support": "Ondersteuning",
+    "home": "Home",
+    "pricing": "Prijzen",
+    "channels": "Kanalen",
+    "getStarted": "Aan de slag",
+    "learnMore": "Meer informatie",
+    "tryFree": "24U gratis proberen",
+    "subscribe": "Abonneren via WhatsApp",
+    "viewPlans": "Prijsplannen bekijken"
+  },
+  "nav": {
+    "home": "Home",
+    "pricing": "Prijzen",
+    "channels": "Kanalen",
+    "support": "Ondersteuning"
+  },
+  "banner": {
+    "title": "IPTV Beam Premium Service",
+    "subtitle": "Voor uw entertainment",
+    "description": "Toegang tot {{channels}}+ live kanalen, films en tv-series in HD-kwaliteit. Kijk overal, altijd, op elk apparaat. {{pricingLink}}.",
+    "channelsLink": "{{count}}+ live kanalen",
+    "pricingLink": "Bekijk onze betaalbare prijsplannen",
+    "getStarted": "Aan de slag",
+    "tryFree": "24U gratis proberen",
+    "stats": {
+      "channels": "{{count}}+",
+      "channelsLabel": "Live Kanalen",
+      "uptime": "{{percent}}%",
+      "uptimeLabel": "Uptime",
+      "support": "24/7",
+      "supportLabel": "Ondersteuning"
+    }
+  },
+  "features": {
+    "title": "Waarom IPTV Beam kiezen",
+    "items": {
+      "channels": {
+        "title": "{{count}}+ Kanalen",
+        "description": "Toegang tot premium kanalen uit VS, VK, Canada en wereldwijd",
+        "link": "Verken onze kanalenlijst"
+      },
+      "movies": {
+        "title": "Films & Series",
+        "description": "Grote VOD-bibliotheek met nieuwste films en tv-series in HD en 4K",
+        "link": "Filmkanalen bekijken"
+      },
+      "multiPlatform": {
+        "title": "Multi-Platform",
+        "description": "Werkt op Smart TV, Android, iOS, MAG en Formuler boxen",
+        "link": "Setup handleidingen bekijken"
+      },
+      "quality": {
+        "title": "Premium Kwaliteit",
+        "description": "HD en 4K kwaliteit streams met gegarandeerd nul buffering",
+        "link": "Onze plannen bekijken"
+      },
+      "sports": {
+        "title": "Sportdekking",
+        "description": "Alle grote sportkanalen inclusief PPV-evenementen en live wedstrijden",
+        "link": "Sportkanalen bekijken"
+      },
+      "setup": {
+        "title": "Eenvoudige Setup",
+        "description": "Snelle installatie met 24/7 ondersteuning via WhatsApp",
+        "link": "Krijg nu hulp"
+      }
+    }
+  },
+  "pricing": {
+    "title": "Kies uw plan",
+    "subtitle": "Begin vandaag met kijken met onze flexibele abonnementsopties",
+    "referralBanner": "🎁 Nodig vrienden uit en krijg 1 maand gratis! Zij krijgen 50% KORTING op hun eerste maand!",
+    "shareEarn": "Delen & Verdienen",
+    "periods": {
+      "monthly": "Maandelijks",
+      "quarterly": "Driemaandelijks", 
+      "yearly": "Jaarlijks"
+    },
+    "plans": {
+      "basic": {
+        "name": "Basic",
+        "features": [
+          "{{count}}+ Live Kanalen",
+          "HD Kwaliteit",
+          "{{days}} Dagen Terugkijken",
+          "{{devices}} Apparaat",
+          "24/7 Ondersteuning"
+        ]
+      },
+      "premium": {
+        "name": "Premium",
+        "features": [
+          "{{count}}+ Live Kanalen",
+          "HD & 4K Kwaliteit",
+          "{{days}} Dagen Terugkijken",
+          "{{devices}} Apparaat",
+          "24/7 Prioriteit Ondersteuning",
+          "PPV Evenementen Inbegrepen"
+        ]
+      },
+      "family": {
+        "name": "Familie",
+        "features": [
+          "{{count}}+ Live Kanalen",
+          "HD & 4K Kwaliteit",
+          "{{days}} Dagen Terugkijken",
+          "{{devices}} Apparaat",
+          "24/7 VIP Ondersteuning",
+          "PPV Evenementen Inbegrepen",
+          "Aangepaste Kanalenlijst"
+        ]
+      }
+    },
+    "mostPopular": "Meest Populair",
+    "save": "Bespaar {{percent}}%"
+  },
+  "channels": {
+    "title": "Premium Kanaal Selectie",
+    "subtitle": "Toegang tot meer dan {{count}}+ premium kanalen",
+    "description": "Geniet van onbeperkte entertainment met onze uitgebreide collectie kanalen inclusief sport, films, nieuws en internationale content. Alle kanalen beschikbaar in HD en 4K kwaliteit.",
+    "stats": {
+      "channels": "{{count}}+",
+      "channelsLabel": "Live Kanalen",
+      "quality": "4K",
+      "qualityLabel": "Ultra HD Kwaliteit",
+      "countries": "{{count}}+",
+      "countriesLabel": "Landen",
+      "support": "24/7",
+      "supportLabel": "Ondersteuning"
+    },
+    "categories": {
+      "sports": {
+        "title": "🏆 Sport",
+        "description": "ESPN, Sky Sports, beIN Sports en alle PPV-evenementen"
+      },
+      "movies": {
+        "title": "🎬 Films & Series",
+        "description": "Netflix, HBO, Disney+, Amazon Prime en meer"
+      },
+      "entertainment": {
+        "title": "📺 Entertainment",
+        "description": "ABC, NBC, CBS, FOX en internationale netwerken"
+      },
+      "international": {
+        "title": "🌍 Internationaal",
+        "description": "VK, Arabische, Indiase, Turkse, Franse kanalen"
+      }
+    },
+    "cta": {
+      "title": "Krijg toegang tot alle kanalen",
+      "description": "Neem nu contact met ons op om de volledige kanalenlijst te ontvangen en begin met kijken! Hulp nodig om te beginnen? Bekijk onze {{supportLink}}.",
+      "supportLink": "setup handleidingen en ondersteuning",
+      "button": "Prijsplannen bekijken"
+    }
+  },
+  "support": {
+    "title": "Hoe kunnen we u helpen?",
+    "tabs": {
+      "faq": "FAQ",
+      "contact": "Contact",
+      "guides": "Setup Handleidingen"
+    },
+    "contact": {
+      "title": "24/7 Ondersteuning beschikbaar",
+      "description": "Hulp nodig? Ons ondersteuningsteam is 24/7 beschikbaar via WhatsApp. Klik op de knop hieronder om een gesprek met ons te beginnen.",
+      "button": "Contact via WhatsApp"
+    }
+  },
+  "testimonials": {
+    "title": "Wat onze klanten zeggen",
+    "items": [
+      {
+        "quote": "IPTV Beam is de beste IPTV-service die ik heb gebruikt. Kristalheldere HD-kwaliteit en buffert nooit. Klantenservice is altijd responsief!",
+        "name": "Jan V.",
+        "location": "Nederland"
+      }
+    ]
+  },
+  "footer": {
+    "copyright": "© {{year}} IPTV Beam. Alle rechten voorbehouden."
+  },
+  "whatsapp": {
+    "contact": "Hallo! Ik ben geïnteresseerd in IPTV Beam service. Kunt u meer informatie geven?",
+    "trial": "Hallo! Ik wil graag een 24-uurs proefperiode van IPTV Beam service aanvragen.",
+    "support": "Hallo! Ik heb hulp nodig met IPTV Beam service."
+  }
+}

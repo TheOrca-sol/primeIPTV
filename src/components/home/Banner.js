@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const BannerContainer = styled.div`
   min-height: 80vh;
@@ -156,16 +157,18 @@ const IllustrationWrapper = styled(motion.div)`
 `;
 
 function Banner() {
+  const { t } = useTranslation();
+
   const handleContact = () => {
-    const phoneNumber = "+212694461807"; // Replace with your WhatsApp number
-    const message = "Hi! I'm interested in IPTV Beam service. Can you provide more information?";
+    const phoneNumber = "+212694461807";
+    const message = t('whatsapp.contact');
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
 
   const handleTrial = () => {
-    const phoneNumber = "+212694461807"; // Replace with your WhatsApp number
-    const message = "Hi! I would like to request a 24-hour trial of IPTV Beam service.";
+    const phoneNumber = "+212694461807";
+    const message = t('whatsapp.trial');
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
@@ -178,16 +181,18 @@ function Banner() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <HighlightSpan>IPTV Beam</HighlightSpan> Premium Service
-          <br />For Your Entertainment
+          <HighlightSpan>IPTV Beam</HighlightSpan> {t('banner.title')}
+          <br />{t('banner.subtitle')}
         </BannerTitle>
         <BannerSubtitle
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          Access <Link to="/channels" style={{ color: 'inherit', textDecoration: 'underline' }}>10,000+ live channels</Link>, movies, and TV shows in HD quality.
-          Watch anywhere, anytime, on any device. <Link to="/pricing" style={{ color: 'inherit', textDecoration: 'underline' }}>View our affordable pricing plans</Link>.
+          {t('banner.description', {
+            channels: '10,000',
+            pricingLink: <Link to="/pricing" style={{ color: 'inherit', textDecoration: 'underline' }}>{t('banner.pricingLink')}</Link>
+          })}
         </BannerSubtitle>
         <ButtonGroup
           initial={{ opacity: 0, y: 20 }}
@@ -199,14 +204,14 @@ function Banner() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <WhatsAppIcon /> Get Started
+            <WhatsAppIcon /> {t('banner.getStarted')}
           </CTAButton>
           <TryButton
             onClick={handleTrial}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Try 24H Free
+            {t('banner.tryFree')}
           </TryButton>
         </ButtonGroup>
         <StatsContainer
@@ -215,16 +220,16 @@ function Banner() {
           transition={{ duration: 0.6, delay: 0.6 }}
         >
           <StatItem>
-            <StatNumber>10,000+</StatNumber>
-            <StatLabel>Live Channels</StatLabel>
+            <StatNumber>{t('banner.stats.channels', { count: '10,000' })}</StatNumber>
+            <StatLabel>{t('banner.stats.channelsLabel')}</StatLabel>
           </StatItem>
           <StatItem>
-            <StatNumber>99.9%</StatNumber>
-            <StatLabel>Uptime</StatLabel>
+            <StatNumber>{t('banner.stats.uptime', { percent: '99.9' })}</StatNumber>
+            <StatLabel>{t('banner.stats.uptimeLabel')}</StatLabel>
           </StatItem>
           <StatItem>
-            <StatNumber>24/7</StatNumber>
-            <StatLabel>Support</StatLabel>
+            <StatNumber>{t('banner.stats.support')}</StatNumber>
+            <StatLabel>{t('banner.stats.supportLabel')}</StatLabel>
           </StatItem>
         </StatsContainer>
       </BannerContent>

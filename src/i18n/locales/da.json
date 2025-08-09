@@ -1,0 +1,263 @@
+{
+  "common": {
+    "loading": "Indlæser...",
+    "error": "Fejl",
+    "success": "Succes",
+    "contact": "Kontakt",
+    "support": "Support",
+    "home": "Hjem",
+    "pricing": "Priser",
+    "channels": "Kanaler",
+    "getStarted": "Kom i gang",
+    "learnMore": "Læs mere",
+    "tryFree": "Prøv 24T gratis",
+    "subscribe": "Abonner via WhatsApp",
+    "viewPlans": "Se prisplaner"
+  },
+  "nav": {
+    "home": "Hjem",
+    "pricing": "Priser",
+    "channels": "Kanaler", 
+    "support": "Support"
+  },
+  "banner": {
+    "title": "IPTV Beam Premium Service",
+    "subtitle": "Til din underholdning",
+    "description": "Få adgang til {{channels}}+ live kanaler, film og tv-serier i HD-kvalitet. Se hvor som helst, når som helst, på enhver enhed. {{pricingLink}}.",
+    "channelsLink": "{{count}}+ live kanaler",
+    "pricingLink": "Se vores overkommelige prisplaner",
+    "getStarted": "Kom i gang",
+    "tryFree": "Prøv 24T gratis",
+    "stats": {
+      "channels": "{{count}}+",
+      "channelsLabel": "Live Kanaler",
+      "uptime": "{{percent}}%",
+      "uptimeLabel": "Oppetid",
+      "support": "24/7",
+      "supportLabel": "Support"
+    }
+  },
+  "features": {
+    "title": "Hvorfor vælge IPTV Beam",
+    "items": {
+      "channels": {
+        "title": "{{count}}+ Kanaler",
+        "description": "Adgang til premium kanaler fra USA, UK, Canada og verden over",
+        "link": "Udforsk vores kanalliste"
+      },
+      "movies": {
+        "title": "Film & Serier",
+        "description": "Stort VOD-bibliotek med de nyeste film og tv-serier i HD og 4K",
+        "link": "Gennemse filmkanaler"
+      },
+      "multiPlatform": {
+        "title": "Multi-Platform",
+        "description": "Virker på Smart TV, Android, iOS, MAG og Formuler bokse",
+        "link": "Se opsætningsguider"
+      },
+      "quality": {
+        "title": "Premium Kvalitet", 
+        "description": "HD og 4K kvalitetsstreams med garanteret nul buffering",
+        "link": "Tjek vores planer"
+      },
+      "sports": {
+        "title": "Sportsdækning",
+        "description": "Alle større sportskanaler inklusive PPV-begivenheder og live kampe",
+        "link": "Se sportskanaler"
+      },
+      "setup": {
+        "title": "Nem Opsætning",
+        "description": "Hurtig installation med 24/7 support via WhatsApp",
+        "link": "Få hjælp nu"
+      }
+    }
+  },
+  "pricing": {
+    "title": "Vælg din plan",
+    "subtitle": "Begynd at se i dag med vores fleksible abonnementsmuligheder",
+    "referralBanner": "🎁 Inviter venner og få 1 måned gratis! De får 50% RABAT på deres første måned!",
+    "shareEarn": "Del & Tjen",
+    "periods": {
+      "monthly": "Månedlig",
+      "quarterly": "Kvartalsvis",
+      "yearly": "Årlig"
+    },
+    "plans": {
+      "basic": {
+        "name": "Basis",
+        "features": [
+          "{{count}}+ Live Kanaler",
+          "HD Kvalitet",
+          "{{days}} Dages Catch-up",
+          "{{devices}} Enhed",
+          "24/7 Support"
+        ]
+      },
+      "premium": {
+        "name": "Premium",
+        "features": [
+          "{{count}}+ Live Kanaler",
+          "HD & 4K Kvalitet",
+          "{{days}} Dages Catch-up", 
+          "{{devices}} Enhed",
+          "24/7 Prioritet Support",
+          "PPV Events Inkluderet"
+        ]
+      },
+      "family": {
+        "name": "Familie",
+        "features": [
+          "{{count}}+ Live Kanaler",
+          "HD & 4K Kvalitet",
+          "{{days}} Dages Catch-up",
+          "{{devices}} Enhed",
+          "24/7 VIP Support",
+          "PPV Events Inkluderet",
+          "Brugerdefineret Kanalliste"
+        ]
+      }
+    },
+    "mostPopular": "Mest Populære",
+    "save": "Spar {{percent}}%"
+  },
+  "channels": {
+    "title": "Premium Kanalvalg",
+    "subtitle": "Få adgang til over {{count}}+ premium kanaler",
+    "description": "Nyd ubegrænset underholdning med vores omfattende samling af kanaler inklusive sport, film, nyheder og internationalt indhold. Alle kanaler tilgængelige i HD og 4K kvalitet.",
+    "stats": {
+      "channels": "{{count}}+",
+      "channelsLabel": "Live Kanaler",
+      "quality": "4K",
+      "qualityLabel": "Ultra HD Kvalitet",
+      "countries": "{{count}}+", 
+      "countriesLabel": "Lande",
+      "support": "24/7",
+      "supportLabel": "Support"
+    },
+    "categories": {
+      "sports": {
+        "title": "🏆 Sport",
+        "description": "ESPN, Sky Sports, beIN Sports og alle PPV-begivenheder"
+      },
+      "movies": {
+        "title": "🎬 Film & Serier",
+        "description": "Netflix, HBO, Disney+, Amazon Prime og mere"
+      },
+      "entertainment": {
+        "title": "📺 Underholdning",
+        "description": "ABC, NBC, CBS, FOX og internationale netværk"
+      },
+      "international": {
+        "title": "🌍 Internationale",
+        "description": "UK, arabiske, indiske, tyrkiske, franske kanaler"
+      }
+    },
+    "cta": {
+      "title": "Få adgang til alle kanaler",
+      "description": "Kontakt os nu for at modtage den fulde kanalliste og begynde at se! Har du brug for hjælp til at komme i gang? Tjek vores {{supportLink}}.",
+      "supportLink": "opsætningsguider og support",
+      "button": "Se prisplaner"
+    }
+  },
+  "support": {
+    "title": "Hvordan kan vi hjælpe dig?",
+    "tabs": {
+      "faq": "FAQ",
+      "contact": "Kontakt os",
+      "guides": "Opsætningsguider"
+    },
+    "faq": [
+      {
+        "question": "Hvordan kommer jeg i gang?",
+        "answer": "Kontakt os blot via WhatsApp for at vælge din abonnementsplan. Når betalingen er bekræftet, sender vi dig dine loginoplysninger og opsætningsinstruktioner med det samme."
+      },
+      {
+        "question": "Hvilke enheder understøttes?",
+        "answer": "Vores tjeneste virker på Smart TV'er, Android bokse/enheder, iOS enheder, MAG bokse, Formuler og enhver enhed der understøtter IPTV-afspillere som IPTV Smarters Pro, TiviMate eller GSE IPTV."
+      },
+      {
+        "question": "Tilbyder I en prøveperiode?",
+        "answer": "Ja, vi tilbyder en 24-timers prøveperiode for at teste vores tjeneste. Kontakt os på WhatsApp for at anmode om en prøveperiode."
+      },
+      {
+        "question": "Hvilke kanaler er inkluderet?",
+        "answer": "Vi tilbyder {{count}}+ kanaler inklusive USA, UK, Canada, sport, film og internationale kanaler. Alle premium kanaler og PPV-begivenheder er inkluderet."
+      },
+      {
+        "question": "Hvor stabil er tjenesten?",
+        "answer": "Vi bruger premium servere med 99,9% oppetid og automatiske backup servere. Vores streams er af høj kvalitet med minimal til ingen buffering."
+      }
+    ],
+    "contact": {
+      "title": "24/7 Support tilgængelig",
+      "description": "Har du brug for hjælp? Vores supportteam er tilgængeligt 24/7 via WhatsApp. Klik på knappen nedenfor for at starte en samtale med os.",
+      "button": "Kontakt via WhatsApp",
+      "info": {
+        "title": "Hurtig supportinfo:",
+        "responseTime": "🕒 Svartid: Normalt inden for 5 minutter",
+        "hours": "⏰ Supporttimer: 24/7",
+        "languages": "🌍 Sprog: Engelsk, fransk, arabisk, tysk, hollandsk, dansk",
+        "platform": "💬 Tilgængelig på: WhatsApp"
+      }
+    },
+    "guides": {
+      "smartTV": {
+        "title": "Smart TV opsætning",
+        "steps": [
+          "Download IPTV Smarters Pro fra dit TV's app store",
+          "Åbn appen og vælg 'Login med Xtream Codes'",
+          "Indtast de loginoplysninger vi gav via WhatsApp",
+          "Klik 'Tilslut' for at begynde at se"
+        ]
+      },
+      "mobile": {
+        "title": "Android/iOS opsætning",
+        "steps": [
+          "Download IPTV Smarters Pro fra Play Store/App Store",
+          "Åbn og vælg 'Login med Xtream Codes'",
+          "Indtast dine oplysninger fra WhatsApp",
+          "Nyd dine kanaler og VOD indhold"
+        ]
+      },
+      "box": {
+        "title": "MAG/Formuler opsætning",
+        "steps": [
+          "Gå til Portalindstillinger eller Portalhåndtering",
+          "Vælg 'Tilføj Portal' eller 'Ny Portal'",
+          "Indtast portal URL'en vi gav",
+          "Indtast dine MAC-adresse oplysninger",
+          "Genstart din boks for at anvende ændringer"
+        ]
+      }
+    }
+  },
+  "testimonials": {
+    "title": "Hvad siger vores kunder",
+    "items": [
+      {
+        "quote": "IPTV Beam er den bedste IPTV-tjeneste jeg har brugt. Krystalklare HD-kvalitet og buffer aldrig. Kundesupport er altid lydhør!",
+        "name": "Lars H.",
+        "location": "Danmark"
+      },
+      {
+        "quote": "IPTV Beam har fremragende kanalvalg og VOD-bibliotek. 4K-indholdet er fantastisk, og opsætningen var super nem.",
+        "name": "Maria K.",
+        "location": "Danmark"
+      },
+      {
+        "quote": "IPTV Beam - perfekt service med danske kanaler i HD. Kundesupport er meget responsive.",
+        "name": "Niels P.",
+        "location": "Danmark"
+      }
+    ]
+  },
+  "footer": {
+    "copyright": "© {{year}} IPTV Beam. Alle rettigheder forbeholdes."
+  },
+  "whatsapp": {
+    "contact": "Hej! Jeg er interesseret i IPTV Beam tjenesten. Kan du give mere information?",
+    "trial": "Hej! Jeg vil gerne anmode om en 24-timers prøveperiode af IPTV Beam tjenesten.",
+    "support": "Hej! Jeg har brug for hjælp til IPTV Beam tjenesten.",
+    "subscription": "Hej! Jeg vil gerne abonnere på {{plan}} planen ({{period}}):\n- Pris: ${{price}}/{{period}}\n- Funktioner: {{features}}"
+  }
+}

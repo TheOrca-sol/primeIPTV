@@ -12,6 +12,7 @@ import Support from './pages/Support';
 
 import { useEffect } from 'react';
 import { handleReferral, logDebug } from './utils/referral';
+import './i18n/i18n';
 
 const theme = {
   colors: {

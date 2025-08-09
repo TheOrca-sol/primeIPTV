@@ -1,0 +1,263 @@
+{
+  "common": {
+    "loading": "Lädt...",
+    "error": "Fehler",
+    "success": "Erfolg",
+    "contact": "Kontakt",
+    "support": "Support",
+    "home": "Startseite",
+    "pricing": "Preise",
+    "channels": "Kanäle",
+    "getStarted": "Loslegen",
+    "learnMore": "Mehr erfahren",
+    "tryFree": "24H kostenlos testen",
+    "subscribe": "Über WhatsApp abonnieren",
+    "viewPlans": "Preispläne ansehen"
+  },
+  "nav": {
+    "home": "Startseite",
+    "pricing": "Preise",
+    "channels": "Kanäle",
+    "support": "Support"
+  },
+  "banner": {
+    "title": "IPTV Beam Premium Service",
+    "subtitle": "Für Ihre Unterhaltung",
+    "description": "Zugang zu {{channels}}+ Live-Kanälen, Filmen und TV-Serien in HD-Qualität. Schauen Sie überall, jederzeit, auf jedem Gerät. {{pricingLink}}.",
+    "channelsLink": "{{count}}+ Live-Kanäle",
+    "pricingLink": "Sehen Sie unsere günstigen Preispläne",
+    "getStarted": "Loslegen",
+    "tryFree": "24H kostenlos testen",
+    "stats": {
+      "channels": "{{count}}+",
+      "channelsLabel": "Live-Kanäle",
+      "uptime": "{{percent}}%",
+      "uptimeLabel": "Verfügbarkeit",
+      "support": "24/7",
+      "supportLabel": "Support"
+    }
+  },
+  "features": {
+    "title": "Warum IPTV Beam wählen",
+    "items": {
+      "channels": {
+        "title": "{{count}}+ Kanäle",
+        "description": "Zugang zu Premium-Kanälen aus USA, UK, Kanada und weltweit",
+        "link": "Unsere Kanalliste erkunden"
+      },
+      "movies": {
+        "title": "Filme & Serien",
+        "description": "Große VOD-Bibliothek mit neuesten Filmen und TV-Serien in HD und 4K",
+        "link": "Filmkanäle durchsuchen"
+      },
+      "multiPlatform": {
+        "title": "Multi-Plattform",
+        "description": "Funktioniert auf Smart TV, Android, iOS, MAG und Formuler Boxen",
+        "link": "Setup-Anleitungen ansehen"
+      },
+      "quality": {
+        "title": "Premium-Qualität",
+        "description": "HD und 4K Qualitäts-Streams mit garantiert null Pufferung",
+        "link": "Unsere Pläne prüfen"
+      },
+      "sports": {
+        "title": "Sport-Abdeckung",
+        "description": "Alle großen Sportkanäle inklusive PPV-Events und Live-Spiele",
+        "link": "Sportkanäle ansehen"
+      },
+      "setup": {
+        "title": "Einfache Einrichtung",
+        "description": "Schnelle Installation mit 24/7 Support über WhatsApp",
+        "link": "Jetzt Hilfe bekommen"
+      }
+    }
+  },
+  "pricing": {
+    "title": "Wählen Sie Ihren Plan",
+    "subtitle": "Beginnen Sie heute mit unseren flexiblen Abonnement-Optionen",
+    "referralBanner": "🎁 Freunde einladen und 1 Monat kostenlos bekommen! Sie erhalten 50% RABATT auf ihren ersten Monat!",
+    "shareEarn": "Teilen & Verdienen",
+    "periods": {
+      "monthly": "Monatlich",
+      "quarterly": "Vierteljährlich",
+      "yearly": "Jährlich"
+    },
+    "plans": {
+      "basic": {
+        "name": "Basic",
+        "features": [
+          "{{count}}+ Live-Kanäle",
+          "HD-Qualität",
+          "{{days}} Tage Aufzeichnung",
+          "{{devices}} Gerät",
+          "24/7 Support"
+        ]
+      },
+      "premium": {
+        "name": "Premium",
+        "features": [
+          "{{count}}+ Live-Kanäle",
+          "HD & 4K Qualität",
+          "{{days}} Tage Aufzeichnung",
+          "{{devices}} Gerät",
+          "24/7 Prioritäts-Support",
+          "PPV-Events inklusive"
+        ]
+      },
+      "family": {
+        "name": "Familie",
+        "features": [
+          "{{count}}+ Live-Kanäle",
+          "HD & 4K Qualität",
+          "{{days}} Tage Aufzeichnung",
+          "{{devices}} Gerät",
+          "24/7 VIP-Support",
+          "PPV-Events inklusive",
+          "Benutzerdefinierte Kanalliste"
+        ]
+      }
+    },
+    "mostPopular": "Beliebteste",
+    "save": "{{percent}}% sparen"
+  },
+  "channels": {
+    "title": "Premium-Kanalauswahl",
+    "subtitle": "Zugang zu über {{count}}+ Premium-Kanälen",
+    "description": "Genießen Sie unbegrenzte Unterhaltung mit unserer umfangreichen Sammlung von Kanälen inklusive Sport, Filme, Nachrichten und internationale Inhalte. Alle Kanäle verfügbar in HD und 4K Qualität.",
+    "stats": {
+      "channels": "{{count}}+",
+      "channelsLabel": "Live-Kanäle",
+      "quality": "4K",
+      "qualityLabel": "Ultra HD Qualität",
+      "countries": "{{count}}+",
+      "countriesLabel": "Länder",
+      "support": "24/7",
+      "supportLabel": "Support"
+    },
+    "categories": {
+      "sports": {
+        "title": "🏆 Sport",
+        "description": "ESPN, Sky Sports, beIN Sports und alle PPV-Events"
+      },
+      "movies": {
+        "title": "🎬 Filme & Serien",
+        "description": "Netflix, HBO, Disney+, Amazon Prime und mehr"
+      },
+      "entertainment": {
+        "title": "📺 Unterhaltung",
+        "description": "ABC, NBC, CBS, FOX und internationale Netzwerke"
+      },
+      "international": {
+        "title": "🌍 International",
+        "description": "UK, arabische, indische, türkische, französische Kanäle"
+      }
+    },
+    "cta": {
+      "title": "Zugang zu allen Kanälen erhalten",
+      "description": "Kontaktieren Sie uns jetzt, um die vollständige Kanalliste zu erhalten und mit dem Schauen zu beginnen! Brauchen Sie Hilfe beim Einstieg? Schauen Sie sich unsere {{supportLink}} an.",
+      "supportLink": "Setup-Anleitungen und Support",
+      "button": "Preispläne ansehen"
+    }
+  },
+  "support": {
+    "title": "Wie können wir Ihnen helfen?",
+    "tabs": {
+      "faq": "FAQ",
+      "contact": "Kontakt",
+      "guides": "Setup-Anleitungen"
+    },
+    "faq": [
+      {
+        "question": "Wie fange ich an?",
+        "answer": "Kontaktieren Sie uns einfach über WhatsApp, um Ihren Abonnement-Plan zu wählen. Sobald die Zahlung bestätigt ist, senden wir Ihnen Ihre Anmeldedaten und Setup-Anweisungen sofort."
+      },
+      {
+        "question": "Welche Geräte werden unterstützt?",
+        "answer": "Unser Service funktioniert auf Smart TVs, Android Boxen/Geräten, iOS Geräten, MAG Boxen, Formuler und jedem Gerät, das IPTV-Player wie IPTV Smarters Pro, TiviMate oder GSE IPTV unterstützt."
+      },
+      {
+        "question": "Bieten Sie eine Testversion an?",
+        "answer": "Ja, wir bieten eine 24-Stunden-Testversion, um unseren Service zu testen. Kontaktieren Sie uns auf WhatsApp, um eine Testversion anzufordern."
+      },
+      {
+        "question": "Welche Kanäle sind enthalten?",
+        "answer": "Wir bieten {{count}}+ Kanäle inklusive USA, UK, Kanada, Sport, Filme und internationale Kanäle. Alle Premium-Kanäle und PPV-Events sind enthalten."
+      },
+      {
+        "question": "Wie stabil ist der Service?",
+        "answer": "Wir verwenden Premium-Server mit 99,9% Verfügbarkeit und automatische Backup-Server. Unsere Streams sind von hoher Qualität mit minimaler bis keiner Pufferung."
+      }
+    ],
+    "contact": {
+      "title": "24/7 Support verfügbar",
+      "description": "Brauchen Sie Hilfe? Unser Support-Team ist 24/7 über WhatsApp verfügbar. Klicken Sie auf die Schaltfläche unten, um ein Gespräch mit uns zu beginnen.",
+      "button": "Über WhatsApp kontaktieren",
+      "info": {
+        "title": "Schnelle Support-Info:",
+        "responseTime": "🕒 Antwortzeit: Normalerweise innerhalb von 5 Minuten",
+        "hours": "⏰ Support-Zeiten: 24/7",
+        "languages": "🌍 Sprachen: Englisch, Französisch, Arabisch, Deutsch, Niederländisch, Dänisch",
+        "platform": "💬 Verfügbar auf: WhatsApp"
+      }
+    },
+    "guides": {
+      "smartTV": {
+        "title": "Smart TV Setup",
+        "steps": [
+          "Laden Sie IPTV Smarters Pro aus dem App Store Ihres TVs herunter",
+          "Öffnen Sie die App und wählen Sie 'Login mit Xtream Codes'",
+          "Geben Sie die Anmeldedaten ein, die wir über WhatsApp bereitgestellt haben",
+          "Klicken Sie 'Verbinden', um mit dem Schauen zu beginnen"
+        ]
+      },
+      "mobile": {
+        "title": "Android/iOS Setup",
+        "steps": [
+          "Laden Sie IPTV Smarters Pro aus dem Play Store/App Store herunter",
+          "Öffnen und wählen Sie 'Login mit Xtream Codes'",
+          "Geben Sie Ihre Anmeldedaten von WhatsApp ein",
+          "Genießen Sie Ihre Kanäle und VOD-Inhalte"
+        ]
+      },
+      "box": {
+        "title": "MAG/Formuler Setup",
+        "steps": [
+          "Gehen Sie zu Portal-Einstellungen oder Portal-Manager",
+          "Wählen Sie 'Portal hinzufügen' oder 'Neues Portal'",
+          "Geben Sie die Portal-URL ein, die wir bereitgestellt haben",
+          "Geben Sie Ihre MAC-Adresse-Anmeldedaten ein",
+          "Starten Sie Ihre Box neu, um Änderungen anzuwenden"
+        ]
+      }
+    }
+  },
+  "testimonials": {
+    "title": "Was unsere Kunden sagen",
+    "items": [
+      {
+        "quote": "IPTV Beam ist der beste IPTV-Service, den ich verwendet habe. Kristallklare HD-Qualität und puffert nie. Kundensupport ist immer ansprechbar!",
+        "name": "Hans M.",
+        "location": "Deutschland"
+      },
+      {
+        "quote": "IPTV Beam hat eine ausgezeichnete Kanalauswahl und VOD-Bibliothek. Der 4K-Inhalt ist erstaunlich und das Setup war super einfach.",
+        "name": "Petra S.",
+        "location": "Deutschland"
+      },
+      {
+        "quote": "IPTV Beam - perfekter Service mit deutschen Kanälen in HD. Der Kundensupport ist sehr reaktionsschnell.",
+        "name": "Klaus W.",
+        "location": "Deutschland"
+      }
+    ]
+  },
+  "footer": {
+    "copyright": "© {{year}} IPTV Beam. Alle Rechte vorbehalten."
+  },
+  "whatsapp": {
+    "contact": "Hallo! Ich interessiere mich für den IPTV Beam Service. Können Sie mehr Informationen geben?",
+    "trial": "Hallo! Ich möchte gerne eine 24-Stunden-Testversion des IPTV Beam Service anfordern.",
+    "support": "Hallo! Ich brauche Hilfe mit dem IPTV Beam Service.",
+    "subscription": "Hallo! Ich möchte den {{plan}} Plan ({{period}}) abonnieren:\n- Preis: ${{price}}/{{period}}\n- Funktionen: {{features}}"
+  }
+}
