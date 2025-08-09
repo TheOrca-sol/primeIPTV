@@ -262,34 +262,19 @@ function Support() {
     }))
   };
 
+  // Get setup guides from translations
   const setupGuides = [
     {
-      title: "Smart TV Setup",
-      steps: [
-        "Download IPTV Smarters Pro from your TV's app store",
-        "Open the app and select 'Login with Xtream Codes'",
-        "Enter the login details we provided via WhatsApp",
-        "Click 'Connect' to start watching"
-      ]
+      title: t('support.guides.smartTV.title'),
+      steps: t('support.guides.smartTV.steps', { returnObjects: true })
     },
     {
-      title: "Android/iOS Setup",
-      steps: [
-        "Download IPTV Smarters Pro from Play Store/App Store",
-        "Open and select 'Login with Xtream Codes'",
-        "Enter your credentials from WhatsApp",
-        "Enjoy your channels and VOD content"
-      ]
+      title: t('support.guides.mobile.title'),
+      steps: t('support.guides.mobile.steps', { returnObjects: true })
     },
     {
-      title: "MAG/Formuler Setup",
-      steps: [
-        "Go to Portal Settings or Portal Manager",
-        "Select 'Add Portal' or 'New Portal'",
-        "Enter the portal URL we provided",
-        "Input your MAC address credentials",
-        "Restart your box to apply changes"
-      ]
+      title: t('support.guides.box.title'),
+      steps: t('support.guides.box.steps', { returnObjects: true })
     }
   ];
 
@@ -383,16 +368,16 @@ function Support() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
+              <h3>{t('support.contact.title')}</h3>
               <ContactText>
-                Need help? Our support team is available 24/7 via WhatsApp. 
-                Click the button below to start a conversation with us.
+                {t('support.contact.description')}
               </ContactText>
               <WhatsAppButton
                 onClick={handleWhatsAppContact}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <WhatsAppIcon /> Contact via WhatsApp
+                <WhatsAppIcon /> {t('support.contact.button')}
               </WhatsAppButton>
             </ContactCard>
             
@@ -402,15 +387,15 @@ function Support() {
               transition={{ duration: 0.5, delay: 0.2 }}
             >
               <ContactText>
-                <strong>Quick Support Info:</strong>
+                <strong>{t('support.contact.info.title')}</strong>
                 <br /><br />
-                🕒 Response Time: Usually within 5 minutes
+                {t('support.contact.info.responseTime')}
                 <br />
-                ⏰ Support Hours: 24/7
+                {t('support.contact.info.hours')}
                 <br />
-                🌍 Languages: English, French, Arabic
+                {t('support.contact.info.languages')}
                 <br />
-                💬 Available on: WhatsApp
+                {t('support.contact.info.platform')}
               </ContactText>
             </ContactCard>
           </ContactContainer>
